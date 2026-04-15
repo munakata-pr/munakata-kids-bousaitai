@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宗像キッズ防衛隊！ はしご車と夏の日焼け（熱中症）大作戦 | 2026年5月2日</title>
+<meta name="description" content="2026年5月2日（土）グローバルスタジアムで開催！はしご車＆救急車がやってくる！ポップアップテント持参OK！家族みんなで1日中遊んで、学んで、くつろごう！入場無料。">
+<meta property="og:title" content="宗像キッズ防衛隊！ はしご車と夏の日焼け（熱中症）大作戦">
+<meta property="og:description" content="2026年5月2日（土）グローバルスタジアムで開催！はしご車＆救急車がやってくる！入場無料。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&family=Zen+Maru+Gothic:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --green-light: #e8f5e9;
+  --green-main: #4caf50;
+  --green-dark: #2e7d32;
+  --green-grass: #66bb6a;
+  --orange-main: #ff9800;
+  --orange-bright: #ffb74d;
+  --orange-dark: #e65100;
+  --yellow-main: #ffeb3b;
+  --yellow-light: #fff9c4;
+  --red-fire: #e53935;
+  --red-light: #ffcdd2;
+  --blue-sky: #81d4fa;
+  --blue-light: #e1f5fe;
+  --white: #ffffff;
+  --text-dark: #333333;
+  --text-light: #555555;
+  --font-main: 'M PLUS Rounded 1c', 'Zen Maru Gothic', 'Rounded Mplus 1c', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  background: var(--green-light);
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  position: relative;
+  background: linear-gradient(180deg, #81d4fa 0%, #b3e5fc 30%, #c8e6c9 60%, #a5d6a7 100%);
+  padding: 2rem 1rem 3rem;
+  text-align: center;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80'%3E%3Cpath fill='%234caf50' d='M0,40 Q180,0 360,40 Q540,80 720,40 Q900,0 1080,40 Q1260,80 1440,40 L1440,80 L0,80Z'/%3E%3C/svg%3E");
+  background-size: cover;
+}
+
+/* floating clouds */
+.cloud {
+  position: absolute;
+  background: rgba(255,255,255,0.8);
+  border-radius: 50px;
+  animation: float-cloud 20s linear infinite;
+}
+.cloud::before, .cloud::after {
+  content: '';
+  position: absolute;
+  background: rgba(255,255,255,0.8);
+  border-radius: 50%;
+}
+.cloud-1 { width: 120px; height: 40px; top: 8%; left: -150px; animation-duration: 25s; }
+.cloud-1::before { width: 50px; height: 50px; top: -20px; left: 20px; }
+.cloud-1::after { width: 60px; height: 60px; top: -30px; left: 50px; }
+.cloud-2 { width: 100px; height: 35px; top: 15%; left: -120px; animation-duration: 30s; animation-delay: 5s; }
+.cloud-2::before { width: 40px; height: 40px; top: -18px; left: 15px; }
+.cloud-2::after { width: 50px; height: 50px; top: -25px; left: 40px; }
+.cloud-3 { width: 80px; height: 30px; top: 5%; left: -100px; animation-duration: 35s; animation-delay: 10s; }
+.cloud-3::before { width: 35px; height: 35px; top: -15px; left: 10px; }
+.cloud-3::after { width: 40px; height: 40px; top: -20px; left: 30px; }
+
+@keyframes float-cloud {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(100vw + 300px)); }
+}
+
+/* sun */
+.sun {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  background: var(--yellow-main);
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(255,235,59,0.6), 0 0 80px rgba(255,235,59,0.3);
+  animation: pulse-sun 3s ease-in-out infinite;
+}
+@keyframes pulse-sun {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 40px rgba(255,235,59,0.6); }
+  50% { transform: scale(1.08); box-shadow: 0 0 60px rgba(255,235,59,0.8); }
+}
+
+.hero-badge {
+  display: inline-block;
+  background: var(--orange-main);
+  color: var(--white);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  animation: bounce-in 0.8s ease-out;
+  box-shadow: 0 4px 15px rgba(255,152,0,0.4);
+}
+
+.hero-gw {
+  font-size: clamp(1rem, 3.5vw, 1.4rem);
+  color: var(--white);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 8vw, 4.5rem);
+  font-weight: 900;
+  color: var(--white);
+  text-shadow: 3px 3px 0 var(--orange-dark), 0 6px 20px rgba(0,0,0,0.15);
+  line-height: 1.2;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.05em;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 3.5vw, 1.6rem);
+  color: var(--white);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.hero-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.info-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255,255,255,0.92);
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+.info-chip .icon { font-size: 1.3em; }
+.info-chip.free {
+  background: var(--red-fire);
+  color: var(--white);
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  padding: 0.6rem 1.8rem;
+}
+
+.hero-tent {
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  color: var(--white);
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(4px);
+  padding: 0.6rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  border: 2px dashed rgba(255,255,255,0.6);
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.05); }
+  70% { transform: scale(0.95); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ========== EYE-CATCH BANNERS ========== */
+.eyecatch-section {
+  background: var(--green-main);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.eyecatch-card {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  padding: 1.8rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.eyecatch-card:hover { transform: translateY(-4px) scale(1.02); }
+
+.eyecatch-fire {
+  background: linear-gradient(135deg, #ff6f00, #ff9800, #ffb74d);
+  color: var(--white);
+}
+.eyecatch-tent {
+  background: linear-gradient(135deg, #1b5e20, #4caf50, #81c784);
+  color: var(--white);
+}
+
+.eyecatch-icon {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  animation: wiggle 2s ease-in-out infinite;
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+.eyecatch-title {
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.eyecatch-note {
+  font-size: 0.9rem;
+  background: rgba(255,255,255,0.25);
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+.eyecatch-desc {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-top: 0.3rem;
+}
+
+/* ========== CONTENT SECTIONS ========== */
+.section {
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  font-weight: 900;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.section-fire .section-title { color: var(--red-fire); }
+.section-fire .section-title::after { background: var(--red-fire); }
+.section-play .section-title { color: var(--green-dark); }
+.section-play .section-title::after { background: var(--green-main); }
+.section-food .section-title { color: var(--orange-dark); }
+.section-food .section-title::after { background: var(--orange-main); }
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-top: 0.5rem;
+  font-weight: 700;
+}
+
+/* content cards */
+.content-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+.content-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid transparent;
+}
+.content-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.section-fire .content-card { border-left-color: var(--red-fire); }
+.section-play .content-card { border-left-color: var(--green-main); }
+.section-food .content-card { border-left-color: var(--orange-main); }
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+.card-desc {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.card-badge {
+  display: inline-block;
+  background: var(--yellow-light);
+  color: var(--orange-dark);
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.2rem 0.8rem;
+  border-radius: 50px;
+  margin-top: 0.5rem;
+  border: 2px solid var(--orange-main);
+}
+
+/* ========== FIRE SECTION BG ========== */
+.bg-fire {
+  background: linear-gradient(180deg, var(--green-light) 0%, #fff3e0 30%, #fff3e0 70%, var(--green-light) 100%);
+}
+
+.bg-play {
+  background: var(--green-light);
+}
+
+.bg-food {
+  background: linear-gradient(180deg, var(--green-light) 0%, var(--yellow-light) 50%, var(--green-light) 100%);
+}
+
+/* ========== MAP SECTION ========== */
+.map-section {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: var(--white);
+}
+
+.map-placeholder {
+  max-width: 700px;
+  margin: 1.5rem auto 0;
+  background: #f5f5f5;
+  border: 3px dashed #bdbdbd;
+  border-radius: 16px;
+  padding: 3rem 1.5rem;
+  color: #9e9e9e;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.map-placeholder .icon { font-size: 2.5rem; display: block; margin-bottom: 0.5rem; }
+
+/* ========== ACCESS ========== */
+.access-section {
+  padding: 3rem 1rem;
+  background: linear-gradient(180deg, var(--white) 0%, var(--blue-light) 100%);
+}
+
+.access-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.access-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin-top: 1.5rem;
+}
+
+.access-name {
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  font-weight: 900;
+  color: var(--green-dark);
+  margin-bottom: 0.5rem;
+}
+
+.access-address {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.access-map-link {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--green-main);
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.7rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+.access-map-link:hover { background: var(--green-dark); }
+
+/* ========== INFO / CONTACT ========== */
+.info-section {
+  padding: 3rem 1rem;
+  background: var(--green-light);
+  text-align: center;
+}
+
+.info-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.info-notice {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  text-align: left;
+}
+
+.notice-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.notice-item:last-child { margin-bottom: 0; }
+.notice-item .icon { flex-shrink: 0; font-size: 1.2rem; margin-top: 0.2rem; }
+
+.instagram-box {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  margin-top: 1.5rem;
+  color: var(--white);
+  box-shadow: 0 6px 25px rgba(131,58,180,0.3);
+}
+
+.instagram-box h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.instagram-handle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: rgba(255,255,255,0.2);
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  margin-top: 0.3rem;
+}
+
+.qr-placeholder {
+  width: 140px;
+  height: 140px;
+  background: var(--white);
+  border-radius: 12px;
+  margin: 1rem auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-weight: 700;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background: var(--green-dark);
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+}
+.footer a { color: rgba(255,255,255,0.9); }
+
+/* ========== FLOATING ELEMENTS ========== */
+.floating-emoji {
+  position: absolute;
+  font-size: 2rem;
+  animation: float-up 6s ease-in-out infinite;
+  opacity: 0.6;
+  pointer-events: none;
+}
+@keyframes float-up {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.6; }
+  50% { transform: translateY(-20px) rotate(10deg); opacity: 0.9; }
+}
+
+/* ========== SCROLL-IN ANIMATION ========== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== CTA SCROLL BUTTON ========== */
+.scroll-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--white);
+  color: var(--green-dark);
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: bounce-cta 2s ease-in-out infinite;
+}
+.scroll-cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+}
+@keyframes bounce-cta {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* ========== COUNTDOWN ========== */
+.countdown-bar {
+  background: var(--orange-main);
+  color: var(--white);
+  text-align: center;
+  padding: 0.8rem 1rem;
+  font-weight: 800;
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (min-width: 768px) {
+  .content-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .content-card.full-width {
+    grid-column: 1 / -1;
+  }
+  .eyecatch-section {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2.5rem 2rem;
+  }
+  .eyecatch-card {
+    max-width: 450px;
+  }
+  .hero {
+    padding: 3rem 2rem 4rem;
+  }
+  .sun {
+    width: 100px;
+    height: 100px;
+    top: 30px;
+    right: 50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .content-card.full-width {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ========== GRASS DIVIDER ========== */
+.grass-divider {
+  height: 40px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath fill='%234caf50' d='M0,20 Q60,0 120,20 Q180,40 240,20 Q300,0 360,20 Q420,40 480,20 Q540,0 600,20 Q660,40 720,20 Q780,0 840,20 Q900,40 960,20 Q1020,0 1080,20 Q1140,40 1200,20 Q1260,0 1320,20 Q1380,40 1440,20 L1440,40 L0,40Z'/%3E%3C/svg%3E");
+  background-size: cover;
+}
+.grass-divider.flip {
+  transform: scaleY(-1);
+}
+
+/* ========== TICKET-STYLE EVENT INFO ========== */
+.ticket {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.12);
+  border: 3px dashed var(--orange-main);
+  position: relative;
+}
+.ticket-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  font-weight: 700;
+}
+.ticket-row .label {
+  background: var(--green-main);
+  color: var(--white);
+  padding: 0.2rem 0.7rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.ticket-row .value { flex: 1; }
+.ticket-divider {
+  border: none;
+  border-top: 2px dashed #e0e0e0;
+  margin: 0.5rem 0;
+}
+
+/* scrollbar style for fun */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--green-light); }
+::-webkit-scrollbar-thumb { background: var(--green-main); border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<!-- COUNTDOWN BAR -->
+<div class="countdown-bar" id="countdown">
+  <span id="countdown-text"></span>
+</div>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="sun"></div>
+  <div class="cloud cloud-1"></div>
+  <div class="cloud cloud-2"></div>
+  <div class="cloud cloud-3"></div>
+
+  <div class="hero-badge">GW特別イベント ／ 入場無料</div>
+
+  <p class="hero-gw">ゴールデンウィークは、家族みんなでグローバルスタジアムへ！</p>
+
+  <h1 class="hero-title">宗像キッズ<br>防衛隊！</h1>
+  <p class="hero-subtitle">はしご車と夏の日焼け（熱中症）大作戦</p>
+
+  <div class="hero-info">
+    <span class="info-chip"><span class="icon">📅</span>2026年5月2日（土）</span>
+    <span class="info-chip"><span class="icon">🕙</span>10:00〜16:00</span>
+    <span class="info-chip free">🎉 入場無料</span>
+  </div>
+
+  <div class="ticket" style="position:relative; z-index:2;">
+    <div class="ticket-row">
+      <span class="label">日時</span>
+      <span class="value">2026年5月2日（土）10:00〜16:00</span>
+    </div>
+    <hr class="ticket-divider">
+    <div class="ticket-row">
+      <span class="label">場所</span>
+      <span class="value">グローバルスタジアム 陸上競技場グラウンド</span>
+    </div>
+    <hr class="ticket-divider">
+    <div class="ticket-row">
+      <span class="label">入場</span>
+      <span class="value" style="color: var(--red-fire); font-size: 1.3em;">無料！</span>
+    </div>
+  </div>
+
+  <p class="hero-tent" style="position:relative; z-index:2;">
+    ⛺ ポップアップテント持参OK！1日中遊んで、学んで、くつろごう！
+  </p>
+
+  <a href="#contents" class="scroll-cta" style="position:relative; z-index:2;">
+    ▼ イベント内容をチェック
+  </a>
+</section>
+
+<!-- ========== EYE-CATCH BANNERS ========== -->
+<section class="eyecatch-section" id="contents">
+  <div class="eyecatch-card eyecatch-fire fade-in">
+    <span class="eyecatch-icon">🚒</span>
+    <h2 class="eyecatch-title">はしご車＆救急車が<br>やってくる！</h2>
+    <span class="eyecatch-note">⚠️ はしご車の搭乗体験は【抽選】です</span>
+    <p class="eyecatch-desc" style="margin-top: 0.5rem;">消防署コラボで本物の消防車両が大集合！</p>
+  </div>
+  <div class="eyecatch-card eyecatch-tent fade-in">
+    <span class="eyecatch-icon">⛺</span>
+    <h2 class="eyecatch-title">ポップアップテント<br>持参OK！</h2>
+    <p class="eyecatch-desc">ペグ打ち不要のテント大歓迎！<br>芝生の上でのんびりピクニック気分♪</p>
+  </div>
+</section>
+
+<!-- ========== 消防署コラボ ========== -->
+<div class="bg-fire">
+  <section class="section section-fire" id="fire">
+    <div class="section-header fade-in">
+      <span class="section-icon">🚒</span>
+      <h2 class="section-title">大注目！消防署コラボエリア</h2>
+      <p class="section-subtitle">本物の消防車両で大興奮の体験がいっぱい！</p>
+    </div>
+    <div class="content-cards">
+      <div class="content-card fade-in">
+        <div class="card-icon">🪜</div>
+        <h3 class="card-title">はしご車＆救急車がやってくる！</h3>
+        <p class="card-desc">
+          大人気！本物のはしご車と救急車を間近で見よう。消防士さんのお仕事も学べるよ！
+        </p>
+        <span class="card-badge">⚡ 搭乗体験は【抽選】 ※詳細は当日会場にて</span>
+      </div>
+      <div class="content-card fade-in">
+        <div class="card-icon">💨</div>
+        <h3 class="card-title">スモークラビリンスに挑戦！</h3>
+        <p class="card-desc">
+          煙の中を安全に歩けるかな？楽しみながら避難の方法を学ぼう！
+        </p>
+      </div>
+      <div class="content-card fade-in">
+        <div class="card-icon">🧗</div>
+        <h3 class="card-title">レスキュー体験！</h3>
+        <p class="card-desc">
+          ロープを使った倍力システムを学ぼう。力が何倍にもなる不思議を体験！
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ========== アクティビティ ========== -->
+<div class="bg-play">
+  <section class="section section-play" id="play">
+    <div class="section-header fade-in">
+      <span class="section-icon">🏃</span>
+      <h2 class="section-title">1日遊べる！アクティビティ＆休憩エリア</h2>
+      <p class="section-subtitle">遊んで、くつろいで、学んで。家族みんなで楽しもう！</p>
+    </div>
+    <div class="content-cards">
+      <div class="content-card fade-in">
+        <div class="card-icon">⛺</div>
+        <h3 class="card-title">タープエリア開放！</h3>
+        <p class="card-desc">
+          ペグ打ち不要のポップアップテント持ち込み大歓迎！芝生の上でのんびりピクニック気分を楽しもう。
+        </p>
+      </div>
+      <div class="content-card fade-in">
+        <div class="card-icon">🎳</div>
+        <h3 class="card-title">モルック体験＆スポーツエリア</h3>
+        <p class="card-desc">
+          初めてでも楽しい！家族みんなで体を動かそう。
+        </p>
+      </div>
+      <div class="content-card fade-in">
+        <div class="card-icon">🌡️</div>
+        <h3 class="card-title">熱中症対策ミニ講座＆企業ブース</h3>
+        <p class="card-desc">
+          企業によるブース出展。講座の合間は日よけ休憩所としても利用可能！
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ========== フード ========== -->
+<div class="bg-food">
+  <section class="section section-food" id="food">
+    <div class="section-header fade-in">
+      <span class="section-icon">🍔</span>
+      <h2 class="section-title">フード＆ドリンク</h2>
+      <p class="section-subtitle">おいしいものを食べながら、1日中ゆっくり過ごそう</p>
+    </div>
+    <div class="content-cards">
+      <div class="content-card full-width fade-in">
+        <div class="card-icon">🚚</div>
+        <h3 class="card-title">キッチンカー＆飲食ブース出店！</h3>
+        <p class="card-desc">
+          美味しいごはんやスイーツで1日中楽しめます。施設内のパン屋・レストラン・売店も合わせてご利用ください！
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ========== 会場マップ ========== -->
+<section class="map-section" id="map">
+  <div class="section-header fade-in">
+    <span class="section-icon">🗺️</span>
+    <h2 class="section-title" style="color: var(--green-dark);">会場マップ</h2>
+  </div>
+  <div class="map-placeholder fade-in">
+    <span class="icon">📍</span>
+    会場マップ（後日挿入予定）
+  </div>
+</section>
+
+<!-- ========== アクセス ========== -->
+<section class="access-section" id="access">
+  <div class="access-inner">
+    <div class="section-header fade-in">
+      <span class="section-icon">📍</span>
+      <h2 class="section-title" style="color: var(--green-dark);">アクセス</h2>
+    </div>
+    <div class="access-card fade-in">
+      <p class="access-name">グローバルスタジアム 陸上競技場グラウンド</p>
+      <p class="access-address">
+        〒811-4153<br>
+        福岡県宗像市吉留46-1
+      </p>
+      <a href="https://maps.google.com/maps?q=福岡県宗像市吉留46-1" target="_blank" rel="noopener" class="access-map-link">
+        📍 Googleマップで開く
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== お知らせ ========== -->
+<section class="info-section" id="info">
+  <div class="info-inner">
+    <div class="section-header fade-in">
+      <span class="section-icon">ℹ️</span>
+      <h2 class="section-title" style="color: var(--green-dark);">ご案内・お知らせ</h2>
+    </div>
+
+    <div class="info-notice fade-in">
+      <div class="notice-item">
+        <span class="icon">💧</span>
+        <span>熱中症対策のため、こまめな水分補給をお願いします。</span>
+      </div>
+      <div class="notice-item">
+        <span class="icon">⛺</span>
+        <span>ポップアップテント（ペグ打ち不要のもの）の持ち込み大歓迎です。</span>
+      </div>
+      <div class="notice-item">
+        <span class="icon">🚗</span>
+        <span>会場の駐車場には限りがあります。できるだけ乗り合わせ・公共交通機関をご利用ください。</span>
+      </div>
+      <div class="notice-item">
+        <span class="icon">🌧️</span>
+        <span>雨天時の開催情報は公式Instagramでお知らせします。</span>
+      </div>
+    </div>
+
+    <div class="instagram-box fade-in">
+      <h3>📸 最新情報・お問い合わせ</h3>
+      <p>公式Instagramをフォローして最新情報をチェック！</p>
+      <span class="instagram-handle">@wellnesstown_munakata</span>
+      <div class="qr-placeholder">
+        <span>QRコード<br>(後日挿入)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <p>宗像キッズ防衛隊！ はしご車と夏の日焼け（熱中症）大作戦</p>
+  <p style="margin-top: 0.3rem;">2026年5月2日（土）グローバルスタジアム</p>
+  <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.6;">&copy; 2026 宗像キッズ防衛隊実行委員会</p>
+</footer>
+
+<script>
+// ========== COUNTDOWN ==========
+function updateCountdown() {
+  const eventDate = new Date('2026-05-02T10:00:00+09:00');
+  const now = new Date();
+  const diff = eventDate - now;
+  const el = document.getElementById('countdown-text');
+
+  if (diff <= 0) {
+    el.textContent = '🎉 本日開催中！グローバルスタジアムでお待ちしています！';
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+  if (days === 0) {
+    el.textContent = '🔥 いよいよ今日！あと' + hours + '時間で開始！';
+  } else {
+    el.textContent = '🎉 開催まであと ' + days + '日 ' + hours + '時間！ — 5月2日（土）10:00〜';
+  }
+}
+updateCountdown();
+setInterval(updateCountdown, 60000);
+
+// ========== SCROLL ANIMATION ==========
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ========== SMOOTH SCROLL ==========
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      const offset = 50;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+</body>
+</html>
