@@ -700,7 +700,7 @@ body {
 .fire-hero-illust {
   background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
   border-radius: 24px;
-  padding: 1rem 1rem 0.5rem;
+  padding: 1.2rem 1.2rem 0.8rem;
   margin-bottom: 1.5rem;
   text-align: center;
   box-shadow: 0 8px 24px rgba(230,81,0,0.18);
@@ -708,11 +708,11 @@ body {
 }
 .fire-hero-illust img {
   width: 100%;
-  max-width: 640px;
+  max-width: 900px;
   height: auto;
   display: block;
   margin: 0 auto;
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.15));
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,0.18));
 }
 .fire-hero-illust-caption {
   font-size: 1.1rem;
@@ -741,21 +741,22 @@ body {
   object-fit: contain;
   background: linear-gradient(135deg,#e1f5fe,#b3e5fc);
   border-radius: 12px 12px 0 0;
-  padding: 0.4rem;
+  padding: 0.6rem;
   display: block;
+  min-height: 160px;
 }
 
 .project-illust-box {
-  margin: 1rem 0;
+  margin: 1.5rem -1rem;
   text-align: center;
 }
 .project-illust-box img {
   width: 100%;
-  max-width: 600px;
+  max-width: 100%;
   height: auto;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  border: 3px solid rgba(255,255,255,0.25);
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+  border: 3px solid rgba(255,255,255,0.3);
 }
 .project-illust-caption {
   color: rgba(255,255,255,0.85);
@@ -766,20 +767,19 @@ body {
 }
 
 .fire-closing-illust {
-  margin: 2rem auto 0;
-  max-width: 640px;
+  margin: 2rem 0 0;
   text-align: center;
-  padding: 1.2rem;
+  padding: 1.5rem 1.2rem;
   background: linear-gradient(135deg, #fff3e0, #ffe0b2);
   border-radius: 20px;
   border: 3px dashed var(--orange-main);
 }
 .fire-closing-illust img {
   width: 100%;
-  max-width: 480px;
+  max-width: 800px;
   height: auto;
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 .fire-closing-caption {
   margin-top: 0.7rem;
@@ -876,9 +876,9 @@ body {
 .fire-vehicle-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.9rem;
+  gap: 1.2rem;
 }
-@media (max-width: 560px) { .fire-vehicle-cards { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .fire-vehicle-cards { grid-template-columns: 1fr; gap: 1rem; } }
 .fire-vehicle-card {
   background: white;
   border-radius: 16px;
