@@ -941,6 +941,22 @@ body {
   line-height: 1.6;
 }
 .fire-safety-item span { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+/* ========== FIRE SECTION IMAGES ========== */
+.fire-feature-img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+  display: block;
+  margin-bottom: 2rem;
+}
+.mission-card-img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 0.9rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
 </style>
 </head>
 <body>
@@ -1021,6 +1037,11 @@ body {
       <p class="section-subtitle">宗像地区消防本部が全力で贈る、<br>「生きる力」と「地域の安全」を楽しく学ぶ体験ゾーン！</p>
     </div>
 
+    <!-- Section intro image -->
+    <div class="fade-in">
+      <img src="images/fire-intro.jpeg" class="fire-feature-img" alt="ウェルネスタウンむなかた 消防体験と絆の広場">
+    </div>
+
     <!-- ★ メインアトラクション：はしご車 -->
     <div class="fire-main fade-in">
       <div class="fire-main-crown">👑 メインアトラクション 👑</div>
@@ -1049,6 +1070,7 @@ body {
     <!-- 車両展示・記念撮影ゾーン -->
     <div class="fire-vehicles fade-in">
       <h3 class="fire-sub-heading">📸 車両展示・記念撮影ゾーン</h3>
+      <img src="images/fire-vehicles.jpeg" class="fire-feature-img" alt="消防車・救急車・ちびっこ防火衣着装体験" style="margin-bottom:1rem;">
       <div class="fire-vehicle-cards">
         <div class="fire-vehicle-card">
           <span class="fvc-icon">🚒</span>
@@ -1083,6 +1105,7 @@ body {
           <div class="project-num">Project 01</div>
           <h4 class="project-title">緊急出動！<br>スモークラビリンス</h4>
           <p class="project-tagline">Gamified Evacuation Mission</p>
+          <img src="images/fire-smokelab.jpeg" class="mission-card-img" alt="スモークラビリンス 4ステップ">
           <div class="smoke-steps">
             <div class="smoke-step">
               <div class="smoke-step-icon">🌀</div>
@@ -1112,6 +1135,7 @@ body {
           <div class="project-num">Project 02</div>
           <h4 class="project-title">レスキュー科学実験：<br>倍力システム</h4>
           <p class="project-tagline">The Science of Rescue</p>
+          <img src="images/fire-science.jpeg" class="mission-card-img" alt="レスキュー科学実験：キミも未来のレスキュー隊員！">
           <div class="science-levels">
             <div class="science-level lv1">Lv.1<br>1倍力</div>
             <div class="science-arrow">→</div>
@@ -1123,6 +1147,11 @@ body {
         </div>
 
       </div>
+    </div>
+
+    <!-- 締めくくり：楽しかったで終わらせない -->
+    <div class="fade-in" style="margin-bottom:1.5rem;">
+      <img src="images/fire-highfive.jpeg" class="fire-feature-img" alt="楽しかったで終わらせない。昨年の風水害の記憶を未来に伝える。">
     </div>
 
     <!-- 安全管理・雨天対応 -->
