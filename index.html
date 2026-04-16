@@ -681,6 +681,266 @@ body {
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--green-light); }
 ::-webkit-scrollbar-thumb { background: var(--green-main); border-radius: 4px; }
+
+/* ========== FIRE MAIN CARD ========== */
+.fire-main {
+  background: linear-gradient(135deg, #b71c1c, #e53935, #ef5350);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(229,57,53,0.35);
+  margin-bottom: 2rem;
+}
+.fire-main-crown {
+  background: linear-gradient(90deg, #e65100, #ff9800, #e65100);
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+  color: white;
+  text-align: center;
+  font-size: 0.92rem;
+  font-weight: 900;
+  padding: 0.55rem 1rem;
+  letter-spacing: 0.12em;
+}
+@keyframes shimmer { 0%{background-position:0% center} 100%{background-position:200% center} }
+.fire-main-body { padding: 1.4rem 1.5rem; color: white; }
+.fire-main-title-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+.fire-main-icon {
+  font-size: 3.8rem;
+  animation: wiggle 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+.fire-main-title {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: 900;
+  color: white;
+  line-height: 1.2;
+}
+.fire-main-sub {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.85);
+  margin-top: 0.25rem;
+  font-weight: 700;
+}
+.fire-rules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 480px) { .fire-rules-grid { grid-template-columns: repeat(2, 1fr); } }
+.fire-rule {
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  padding: 0.6rem 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  line-height: 1.5;
+}
+.fire-rule strong { color: #ffeb3b; display: block; font-size: 1rem; }
+.fire-lottery-note {
+  background: rgba(255,255,255,0.18);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: white;
+  border: 2px dashed rgba(255,255,255,0.45);
+  text-align: center;
+  line-height: 1.6;
+}
+.fire-lottery-note strong { color: #ffeb3b; }
+
+/* ========== VEHICLE DISPLAY ========== */
+.fire-vehicles { margin-bottom: 2rem; }
+.fire-sub-heading {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--red-fire);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.fire-vehicle-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+}
+@media (max-width: 560px) { .fire-vehicle-cards { grid-template-columns: 1fr; } }
+.fire-vehicle-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.2rem 0.8rem;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  border: 2px solid var(--red-light);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.fire-vehicle-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+.fire-vehicle-highlight { border-color: var(--orange-main); background: linear-gradient(135deg, #fff8e1, white); }
+.fvc-icon { font-size: 2.8rem; display: block; margin-bottom: 0.4rem; animation: wiggle 2.5s ease-in-out infinite; }
+.fvc-name { font-weight: 800; font-size: 0.95rem; color: var(--text-dark); line-height: 1.4; }
+.fvc-desc { margin-top: 0.5rem; font-size: 0.8rem; color: var(--orange-dark); font-weight: 700; line-height: 1.5; }
+
+/* ========== MISSION & SCIENCE ========== */
+.mission-section {
+  background: linear-gradient(160deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 36px rgba(0,0,0,0.35);
+}
+.mission-header {
+  background: repeating-linear-gradient(-55deg, #f9a825, #f9a825 12px, #212121 12px, #212121 24px);
+  padding: 1.3rem 1.5rem;
+  text-align: center;
+}
+.mission-badge-row { display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 0.6rem; }
+.mission-badge-confidential, .mission-badge-classified {
+  background: var(--red-fire);
+  color: white;
+  font-size: 0.68rem;
+  font-weight: 900;
+  padding: 0.2rem 0.7rem;
+  border-radius: 4px;
+  letter-spacing: 0.1em;
+  border: 1px solid rgba(255,255,255,0.5);
+  text-transform: uppercase;
+}
+.mission-title {
+  color: white;
+  font-size: clamp(1.2rem, 4vw, 1.65rem);
+  font-weight: 900;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+  line-height: 1.3;
+}
+.mission-subtitle {
+  color: rgba(255,255,255,0.78);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 0.4rem;
+  line-height: 1.6;
+}
+.mission-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  padding: 1.5rem;
+}
+@media (max-width: 580px) { .mission-cards { grid-template-columns: 1fr; } }
+.mission-card {
+  background: rgba(255,255,255,0.06);
+  border: 2px solid rgba(249,168,37,0.4);
+  border-radius: 16px;
+  padding: 1.2rem;
+  color: white;
+  transition: border-color 0.3s;
+}
+.mission-card:hover { border-color: rgba(249,168,37,0.85); }
+.project-num {
+  font-size: 0.72rem;
+  font-weight: 900;
+  color: #f9a825;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+.project-title {
+  font-size: clamp(1rem, 3.5vw, 1.2rem);
+  font-weight: 900;
+  color: white;
+  line-height: 1.3;
+  margin-bottom: 0.2rem;
+}
+.project-tagline { font-size: 0.68rem; color: rgba(255,255,255,0.45); font-weight: 700; margin-bottom: 0.8rem; }
+
+/* Smoke Maze Steps */
+.smoke-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.2rem;
+  margin-bottom: 0.8rem;
+  flex-wrap: nowrap;
+}
+.smoke-step { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; flex: 1; }
+.smoke-step-icon {
+  font-size: 1.4rem;
+  background: rgba(249,168,37,0.18);
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.smoke-step-label { font-size: 0.65rem; font-weight: 700; text-align: center; color: rgba(255,255,255,0.82); line-height: 1.3; }
+.smoke-arrow { color: #f9a825; font-size: 0.9rem; font-weight: 900; flex-shrink: 0; }
+.project-note {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.48);
+  font-weight: 700;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  line-height: 1.5;
+}
+
+/* Science Levels */
+.science-levels {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0.8rem 0;
+}
+.science-level {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem 0.2rem;
+  border-radius: 10px;
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1.4;
+}
+.lv1 { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.65); }
+.lv2 { background: rgba(249,168,37,0.2); color: #ffb74d; }
+.lv3 { background: linear-gradient(135deg, #e65100, #ff9800); color: white; }
+.science-arrow { color: #f9a825; font-size: 0.9rem; font-weight: 900; }
+.project-challenge {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.88);
+  text-align: center;
+  line-height: 1.7;
+}
+.project-challenge strong { color: #ffeb3b; }
+
+/* ========== FIRE SAFETY NOTE ========== */
+.fire-safety {
+  background: white;
+  border-radius: 16px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  border-left: 4px solid var(--orange-main);
+}
+.fire-safety-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+.fire-safety-item span { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1rem; }
 </style>
 </head>
 <body>
@@ -754,35 +1014,129 @@ body {
 <!-- ========== 消防署コラボ ========== -->
 <div class="bg-fire">
   <section class="section section-fire" id="fire">
+
     <div class="section-header fade-in">
       <span class="section-icon">🚒</span>
-      <h2 class="section-title">大注目！消防署コラボエリア</h2>
-      <p class="section-subtitle">本物の消防車両で大興奮の体験がいっぱい！</p>
+      <h2 class="section-title">消防署コラボ！体験と絆の広場</h2>
+      <p class="section-subtitle">宗像地区消防本部が全力で贈る、<br>「生きる力」と「地域の安全」を楽しく学ぶ体験ゾーン！</p>
     </div>
-    <div class="content-cards">
-      <div class="content-card fade-in">
-        <div class="card-icon">🪜</div>
-        <h3 class="card-title">はしご車＆救急車がやってくる！</h3>
-        <p class="card-desc">
-          大人気！本物のはしご車と救急車を間近で見よう。消防士さんのお仕事も学べるよ！
-        </p>
-        <span class="card-badge">⚡ 搭乗体験は【抽選】 ※詳細は当日会場にて</span>
-      </div>
-      <div class="content-card fade-in">
-        <div class="card-icon">💨</div>
-        <h3 class="card-title">スモークラビリンスに挑戦！</h3>
-        <p class="card-desc">
-          煙の中を安全に歩けるかな？楽しみながら避難の方法を学ぼう！
-        </p>
-      </div>
-      <div class="content-card fade-in">
-        <div class="card-icon">🧗</div>
-        <h3 class="card-title">レスキュー体験！</h3>
-        <p class="card-desc">
-          ロープを使った倍力システムを学ぼう。力が何倍にもなる不思議を体験！
-        </p>
+
+    <!-- ★ メインアトラクション：はしご車 -->
+    <div class="fire-main fade-in">
+      <div class="fire-main-crown">👑 メインアトラクション 👑</div>
+      <div class="fire-main-body">
+        <div class="fire-main-title-area">
+          <div class="fire-main-icon">🪜</div>
+          <div>
+            <h3 class="fire-main-title">はしご車搭乗体験！</h3>
+            <p class="fire-main-sub">高さ10メートル！空から宗像を見下ろせ！</p>
+          </div>
+        </div>
+        <div class="fire-rules-grid">
+          <div class="fire-rule">👶 対象<strong>5歳以上</strong></div>
+          <div class="fire-rule">👨‍👩‍👧 1家族<strong>最大3名</strong></div>
+          <div class="fire-rule">📏 高さ<strong>10mまで</strong></div>
+          <div class="fire-rule">👨‍🚒 最大<strong>30組限定</strong></div>
+          <div class="fire-rule">⏱️ 1組<strong>約5分</strong></div>
+          <div class="fire-rule">🎯 選考<strong>事前抽選</strong></div>
+        </div>
+        <div class="fire-lottery-note">
+          🎊 空きが出た場合はその場で<strong>じゃんけん大会</strong>で決定！チャンスはあるぞ！
+        </div>
       </div>
     </div>
+
+    <!-- 車両展示・記念撮影ゾーン -->
+    <div class="fire-vehicles fade-in">
+      <h3 class="fire-sub-heading">📸 車両展示・記念撮影ゾーン</h3>
+      <div class="fire-vehicle-cards">
+        <div class="fire-vehicle-card">
+          <span class="fvc-icon">🚒</span>
+          <div class="fvc-name">消防車<br><small>（ポンプ車）</small></div>
+        </div>
+        <div class="fire-vehicle-card">
+          <span class="fvc-icon">🚑</span>
+          <div class="fvc-name">救急車<br><small>（車内見学・撮影可！）</small></div>
+        </div>
+        <div class="fire-vehicle-card fire-vehicle-highlight">
+          <span class="fvc-icon">👒</span>
+          <div class="fvc-name">ちびっこ防火衣<br>着装体験！</div>
+          <div class="fvc-desc">子ども用消防服を着て記念撮影！<br>家族の思い出を作ろう✨</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MISSION & SCIENCE -->
+    <div class="mission-section fade-in">
+      <div class="mission-header">
+        <div class="mission-badge-row">
+          <span class="mission-badge-confidential">CONFIDENTIAL</span>
+          <span class="mission-badge-classified">CLASSIFIED</span>
+        </div>
+        <h3 class="mission-title">若手消防士企画：<br>MISSION &amp; SCIENCE</h3>
+        <p class="mission-subtitle">単なる訓練じゃない——「冒険」だ。<br>子どもたちの好奇心を全力で刺激する特別プログラム！</p>
+      </div>
+      <div class="mission-cards">
+
+        <!-- Project 01 -->
+        <div class="mission-card">
+          <div class="project-num">Project 01</div>
+          <h4 class="project-title">緊急出動！<br>スモークラビリンス</h4>
+          <p class="project-tagline">Gamified Evacuation Mission</p>
+          <div class="smoke-steps">
+            <div class="smoke-step">
+              <div class="smoke-step-icon">🌀</div>
+              <div class="smoke-step-label">①迷路<br><small>Maze</small></div>
+            </div>
+            <div class="smoke-arrow">→</div>
+            <div class="smoke-step">
+              <div class="smoke-step-icon">📻</div>
+              <div class="smoke-step-label">②無線<br><small>Radio</small></div>
+            </div>
+            <div class="smoke-arrow">→</div>
+            <div class="smoke-step">
+              <div class="smoke-step-icon">🔍</div>
+              <div class="smoke-step-label">③捜索<br><small>Rescue</small></div>
+            </div>
+            <div class="smoke-arrow">→</div>
+            <div class="smoke-step">
+              <div class="smoke-step-icon">🧯</div>
+              <div class="smoke-step-label">④消火<br><small>Extinguish</small></div>
+            </div>
+          </div>
+          <p class="project-note">※煙は人体に無害／動きやすい私服で参加</p>
+        </div>
+
+        <!-- Project 02 -->
+        <div class="mission-card">
+          <div class="project-num">Project 02</div>
+          <h4 class="project-title">レスキュー科学実験：<br>倍力システム</h4>
+          <p class="project-tagline">The Science of Rescue</p>
+          <div class="science-levels">
+            <div class="science-level lv1">Lv.1<br>1倍力</div>
+            <div class="science-arrow">→</div>
+            <div class="science-level lv2">Lv.2<br>3倍力</div>
+            <div class="science-arrow">→</div>
+            <div class="science-level lv3">Lv.3<br>5倍力🔥</div>
+          </div>
+          <p class="project-challenge">君の小さな手で、<br><strong>大人を持ち上げられるか！？</strong><br><small>消防救助隊の本物の技術を体験しよう</small></p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 安全管理・雨天対応 -->
+    <div class="fire-safety fade-in">
+      <div class="fire-safety-item">
+        <span>🔒</span>
+        <div>機材エリアと歩行エリアをカラーコーンで完全分離。各クール前に車両作動確認を実施します。</div>
+      </div>
+      <div class="fire-safety-item">
+        <span>☔</span>
+        <div>雨天時：はしご車体験は中止。その他コンテンツは可能な限り屋内で継続します（イベント自体は中止しません）。</div>
+      </div>
+    </div>
+
   </section>
 </div>
 
