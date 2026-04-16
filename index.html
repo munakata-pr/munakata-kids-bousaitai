@@ -1061,77 +1061,14 @@ body {
 .pb-safety { padding: 0.8rem 1.4rem 1.5rem; display: flex; flex-direction: column; gap: 0.4rem; }
 .pb-safety-item { font-size: 0.8rem; font-weight: 700; color: rgba(255,255,255,0.5); line-height: 1.6; }
 
-/* ========== FIRE SECTION: 幅拡張 & 画像フルブリード ========== */
-
-/* 消防セクションだけ幅を広げ左右パディングをゼロに */
-.section.section-fire {
-  max-width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/* セクション内のテキストブロック（ヘッダー・vehicleカード等）は内側でmax-width制限 */
-.section.section-fire .section-header,
-.section.section-fire .fire-main,
-.section.section-fire .fire-vehicles,
-.section.section-fire .ms-intro,
-.section.section-fire .fire-safety {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-/* fire-mainとfire-vehiclesの内部padding調整 */
-.section.section-fire .fire-main { padding-left: 1rem; padding-right: 1rem; }
-.section.section-fire .fire-vehicles { padding-left: 1rem; padding-right: 1rem; }
-
-/* プロジェクトブロックはフルブリード */
-.project-block {
-  border-radius: 0;
-  margin-left: 0;
-  margin-right: 0;
-}
-@media (min-width: 768px) {
-  .project-block {
-    border-radius: 0; /* スクリーン幅いっぱいに使う */
-  }
-}
-
-/* pb-img: 真のフルブリード */
-.pb-img {
-  width: 100%;
-  display: block;
-  max-height: 560px;
-  object-fit: cover;
-  object-position: center top;
-}
-
-/* fire-feature-img: ゆとりある大きさ */
+/* ========== FIRE SECTION IMAGES ========== */
 .fire-feature-img {
   width: 100%;
-  border-radius: 16px;
+  border-radius: 20px;
   box-shadow: 0 8px 28px rgba(0,0,0,0.18);
   display: block;
   margin-bottom: 2rem;
 }
-
-/* vehicles画像はコンテンツ幅内で大きく */
-.fire-vehicles .fire-feature-img {
-  border-radius: 14px;
-  max-height: 480px;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* 締めくくり画像 */
-.section.section-fire .fire-closing-wrap {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
 .mission-card-img {
   width: 100%;
   border-radius: 10px;
@@ -1139,13 +1076,6 @@ body {
   margin-bottom: 0.9rem;
   box-shadow: 0 4px 14px rgba(0,0,0,0.25);
 }
-
-/* ms-intro・project-block内テキスト部も幅制限 */
-.pb-header { max-width: 960px; margin-left: auto; margin-right: auto; }
-.smoke-mission-steps { max-width: 960px; margin-left: auto; margin-right: auto; }
-.force-levels { max-width: 960px; margin-left: auto; margin-right: auto; }
-.science-principle { max-width: 960px; margin-left: auto; margin-right: auto; margin-bottom: 1.2rem; }
-.pb-safety { max-width: 960px; margin-left: auto; margin-right: auto; }
 </style>
 </head>
 <body>
@@ -1407,7 +1337,7 @@ body {
     </div>
 
     <!-- 締めくくり -->
-    <div class="fire-closing-wrap fade-in" style="margin-bottom:1.5rem;">
+    <div class="fade-in" style="margin-bottom:1.5rem;">
       <img src="images/fire-highfive.jpeg" class="fire-feature-img" alt="「楽しかった」で終わらせない。昨年の風水害の記憶を未来へつなぐ。" style="margin-bottom:0.5rem;">
       <p style="text-align:center; font-size:0.88rem; color:var(--text-light); font-weight:700;">「楽しかった」で終わらせない——体験が、防災の記憶をつなぐ。</p>
     </div>
