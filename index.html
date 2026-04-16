@@ -942,6 +942,125 @@ body {
 }
 .fire-safety-item span { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1rem; }
 
+/* ========== MISSION INTRO BANNER ========== */
+.ms-intro {
+  background: repeating-linear-gradient(-55deg, #f9a825, #f9a825 12px, #1a1a1a 12px, #1a1a1a 24px);
+  border-radius: 20px;
+  padding: 1.8rem 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 32px rgba(0,0,0,0.3);
+}
+.ms-intro-badges { display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 0.8rem; }
+.ms-badge-c, .ms-badge-cl {
+  background: var(--red-fire);
+  color: white;
+  font-size: 0.68rem;
+  font-weight: 900;
+  padding: 0.2rem 0.9rem;
+  border-radius: 4px;
+  letter-spacing: 0.12em;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+.ms-intro-title {
+  color: white;
+  font-size: clamp(1.2rem, 4.5vw, 1.7rem);
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 0.6rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+.ms-intro-desc {
+  color: rgba(255,255,255,0.82);
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.75;
+}
+
+/* ========== PROJECT BLOCKS ========== */
+.project-block {
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0 12px 44px rgba(0,0,0,0.28);
+}
+.project-smoke { background: linear-gradient(160deg, #1c1c1e 0%, #2c2c2e 60%, #1a1a1c 100%); }
+.project-science { background: linear-gradient(160deg, #0a192f 0%, #112240 60%, #091629 100%); }
+.pb-header { padding: 1.8rem 1.6rem 1.3rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.pb-num { font-size: 0.72rem; font-weight: 900; color: #f9a825; letter-spacing: 0.18em; margin-bottom: 0.3rem; }
+.pb-title {
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  font-weight: 900; color: white; line-height: 1.2; margin-bottom: 0.25rem;
+}
+.pb-tagline { font-size: 0.72rem; color: rgba(255,255,255,0.38); font-weight: 700; margin-bottom: 0.8rem; letter-spacing: 0.12em; }
+.pb-desc { font-size: 0.95rem; font-weight: 700; color: rgba(255,255,255,0.8); line-height: 1.8; }
+.pb-challenge-hook {
+  font-size: clamp(1rem, 3.8vw, 1.35rem);
+  font-weight: 900; color: #ffeb3b; margin-bottom: 0.5rem; line-height: 1.3;
+}
+.pb-img { width: 100%; display: block; }
+
+/* Smoke Mission Steps */
+.smoke-mission-steps { padding: 1.5rem 1.4rem; display: flex; flex-direction: column; }
+.sms-step {
+  display: flex; gap: 0.9rem; align-items: flex-start;
+  background: rgba(255,255,255,0.05); border-radius: 14px;
+  padding: 1rem 1.1rem; border-left: 4px solid #f9a825;
+}
+.sms-num {
+  background: #f9a825; color: #1a1a1a;
+  font-size: 0.95rem; font-weight: 900;
+  width: 30px; height: 30px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.sms-icon { font-size: 1.55rem; flex-shrink: 0; line-height: 1.2; }
+.sms-content { flex: 1; }
+.sms-title { font-size: 1rem; font-weight: 900; color: white; margin-bottom: 0.25rem; }
+.sms-desc { font-size: 0.85rem; font-weight: 700; color: rgba(255,255,255,0.7); line-height: 1.72; }
+.sms-connector { text-align: center; color: #f9a825; font-size: 1.3rem; padding: 0.25rem 0; }
+
+/* Force Levels */
+.force-levels {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem; padding: 1.4rem 1.4rem;
+}
+@media (max-width: 540px) { .force-levels { grid-template-columns: 1fr; } }
+.force-level {
+  border-radius: 16px; padding: 1.1rem 0.8rem;
+  text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.35rem;
+}
+.fl-lv1 { background: rgba(255,255,255,0.06); border: 2px solid rgba(255,255,255,0.1); }
+.fl-lv2 { background: rgba(249,168,37,0.1); border: 2px solid rgba(249,168,37,0.35); }
+.fl-lv3 { background: linear-gradient(135deg,rgba(230,81,0,.28),rgba(255,152,0,.28)); border: 2px solid #ff9800; }
+.fl-badge { font-size: 0.7rem; font-weight: 900; color: #f9a825; letter-spacing: 0.1em; }
+.fl-name { font-size: 1rem; font-weight: 900; color: white; line-height: 1.3; }
+.fl-name small { font-size: 0.72rem; color: rgba(255,255,255,0.55); }
+.fl-person { font-size: 1.6rem; }
+.fl-weight { font-size: 0.82rem; color: rgba(255,255,255,0.55); font-weight: 700; }
+.fl-arrow { color: rgba(255,255,255,0.3); font-size: 0.85rem; }
+.fl-force {
+  font-size: 0.9rem; font-weight: 900;
+  padding: 0.38rem 0.6rem; border-radius: 8px; line-height: 1.3;
+}
+.fl-force-hard { background: rgba(229,57,53,.18); color: #ef9a9a; }
+.fl-force-med  { background: rgba(249,168,37,.18); color: #ffd54f; }
+.fl-force-easy { background: linear-gradient(135deg,#e65100,#ff9800); color: white; font-size: 1rem; }
+.fl-rope { font-size: 0.72rem; color: rgba(255,255,255,0.38); font-weight: 700; }
+.fl-note { font-size: 0.7rem; color: rgba(255,255,255,0.5); font-weight: 700; line-height: 1.45; }
+
+/* Science principle box */
+.science-principle {
+  margin: 0 1.4rem 1.2rem;
+  background: rgba(255,255,255,0.06); border-radius: 12px;
+  padding: 1rem 1.1rem; border-left: 4px solid #f9a825;
+}
+.sp-title { font-size: 0.9rem; font-weight: 900; color: #f9a825; margin-bottom: 0.4rem; }
+.science-principle p { font-size: 0.85rem; font-weight: 700; color: rgba(255,255,255,0.72); line-height: 1.75; }
+
+/* Safety notes inside project blocks */
+.pb-safety { padding: 0.8rem 1.4rem 1.5rem; display: flex; flex-direction: column; gap: 0.4rem; }
+.pb-safety-item { font-size: 0.8rem; font-weight: 700; color: rgba(255,255,255,0.5); line-height: 1.6; }
+
 /* ========== FIRE SECTION IMAGES ========== */
 .fire-feature-img {
   width: 100%;
@@ -1088,70 +1207,139 @@ body {
       </div>
     </div>
 
-    <!-- MISSION & SCIENCE -->
-    <div class="mission-section fade-in">
-      <div class="mission-header">
-        <div class="mission-badge-row">
-          <span class="mission-badge-confidential">CONFIDENTIAL</span>
-          <span class="mission-badge-classified">CLASSIFIED</span>
-        </div>
-        <h3 class="mission-title">若手消防士企画：<br>MISSION &amp; SCIENCE</h3>
-        <p class="mission-subtitle">単なる訓練じゃない——「冒険」だ。<br>子どもたちの好奇心を全力で刺激する特別プログラム！</p>
+    <!-- ====== MISSION & SCIENCE ====== -->
+
+    <!-- 導入バナー -->
+    <div class="ms-intro fade-in">
+      <div class="ms-intro-badges">
+        <span class="ms-badge-c">CONFIDENTIAL</span>
+        <span class="ms-badge-cl">CLASSIFIED</span>
       </div>
-      <div class="mission-cards">
+      <h3 class="ms-intro-title">若手消防士が贈る特別企画<br>MISSION &amp; SCIENCE</h3>
+      <p class="ms-intro-desc">単なる訓練じゃない——「冒険」だ。<br>若手消防士のアイデアが生んだ、子どもたちの好奇心を全力で刺激する2つの特別プログラム！</p>
+    </div>
 
-        <!-- Project 01 -->
-        <div class="mission-card">
-          <div class="project-num">Project 01</div>
-          <h4 class="project-title">緊急出動！<br>スモークラビリンス</h4>
-          <p class="project-tagline">Gamified Evacuation Mission</p>
-          <img src="images/fire-smokelab.jpeg" class="mission-card-img" alt="スモークラビリンス 4ステップ">
-          <div class="smoke-steps">
-            <div class="smoke-step">
-              <div class="smoke-step-icon">🌀</div>
-              <div class="smoke-step-label">①迷路<br><small>Maze</small></div>
-            </div>
-            <div class="smoke-arrow">→</div>
-            <div class="smoke-step">
-              <div class="smoke-step-icon">📻</div>
-              <div class="smoke-step-label">②無線<br><small>Radio</small></div>
-            </div>
-            <div class="smoke-arrow">→</div>
-            <div class="smoke-step">
-              <div class="smoke-step-icon">🔍</div>
-              <div class="smoke-step-label">③捜索<br><small>Rescue</small></div>
-            </div>
-            <div class="smoke-arrow">→</div>
-            <div class="smoke-step">
-              <div class="smoke-step-icon">🧯</div>
-              <div class="smoke-step-label">④消火<br><small>Extinguish</small></div>
-            </div>
+    <!-- ━━━ Project 01：スモークラビリンス ━━━ -->
+    <div class="project-block project-smoke fade-in">
+      <div class="pb-header">
+        <div class="pb-num">PROJECT 01 ／ Gamified Evacuation Mission</div>
+        <h3 class="pb-title">緊急出動！<br>スモークラビリンス</h3>
+        <p class="pb-tagline">煙が充満するテントの中、キミは今日だけ本物の救助隊員だ</p>
+        <p class="pb-desc">視界ゼロの煙の中を進みながら、無線で本部と連絡をとり、倒れている要救助者を発見して消火しながら脱出する——本番さながらのミッションを4ステップで体験しよう！</p>
+      </div>
+
+      <img src="images/fire-smokelab.jpeg" class="pb-img" alt="スモークラビリンス 体験の流れ">
+
+      <div class="smoke-mission-steps">
+
+        <div class="sms-step">
+          <div class="sms-num">1</div>
+          <div class="sms-icon">🌀</div>
+          <div class="sms-content">
+            <div class="sms-title">迷路突破（Maze）</div>
+            <div class="sms-desc">煙で視界が遮られたダンボール製の迷路を突破せよ！「煙の中では低い姿勢が命を守る」——消防士が現場で実践する基本動作を、自分の体で感じながら出口を目指す。</div>
           </div>
-          <p class="project-note">※煙は人体に無害／動きやすい私服で参加</p>
+        </div>
+        <div class="sms-connector">↓</div>
+
+        <div class="sms-step">
+          <div class="sms-num">2</div>
+          <div class="sms-icon">📻</div>
+          <div class="sms-content">
+            <div class="sms-title">無線で本部へ連絡（Radio）</div>
+            <div class="sms-desc">「こちら現場、現在地を報告します！」——本物のトランシーバーを使って本部と通信。指示を受けながら判断する。チームワークが救助の成否を決める。</div>
+          </div>
+        </div>
+        <div class="sms-connector">↓</div>
+
+        <div class="sms-step">
+          <div class="sms-num">3</div>
+          <div class="sms-icon">🔍</div>
+          <div class="sms-content">
+            <div class="sms-title">要救助者を発見（Rescue）</div>
+            <div class="sms-desc">煙の中に倒れている人形（要救助者）を見つけ出せ！周囲を素早く確認し、声を頼りに位置を特定する。「発見！」の報告で次の行動へ。</div>
+          </div>
+        </div>
+        <div class="sms-connector">↓</div>
+
+        <div class="sms-step">
+          <div class="sms-num">4</div>
+          <div class="sms-icon">🧯</div>
+          <div class="sms-content">
+            <div class="sms-title">消火して脱出！（Extinguish）</div>
+            <div class="sms-desc">出口で水の消火器を構えて消火！「ピン・ポーズ・プレス」3つの動作で炎を制圧。「救助完了！」を報告し、全員無事に脱出したらミッションクリア！🎉</div>
+          </div>
         </div>
 
-        <!-- Project 02 -->
-        <div class="mission-card">
-          <div class="project-num">Project 02</div>
-          <h4 class="project-title">レスキュー科学実験：<br>倍力システム</h4>
-          <p class="project-tagline">The Science of Rescue</p>
-          <img src="images/fire-science.jpeg" class="mission-card-img" alt="レスキュー科学実験：キミも未来のレスキュー隊員！">
-          <div class="science-levels">
-            <div class="science-level lv1">Lv.1<br>1倍力</div>
-            <div class="science-arrow">→</div>
-            <div class="science-level lv2">Lv.2<br>3倍力</div>
-            <div class="science-arrow">→</div>
-            <div class="science-level lv3">Lv.3<br>5倍力🔥</div>
-          </div>
-          <p class="project-challenge">君の小さな手で、<br><strong>大人を持ち上げられるか！？</strong><br><small>消防救助隊の本物の技術を体験しよう</small></p>
-        </div>
+      </div>
 
+      <div class="pb-safety">
+        <div class="pb-safety-item">🔒 参加者は防火衣を着用せず、動きやすい私服で参加します</div>
+        <div class="pb-safety-item">💨 使用する煙は人体に無害なものを使用します</div>
+        <div class="pb-safety-item">👨‍👩‍👧 待機列には昨年の宗像・福津エリアの風水害写真を展示——体験前から防災を学べます</div>
       </div>
     </div>
 
-    <!-- 締めくくり：楽しかったで終わらせない -->
+    <!-- ━━━ Project 02：倍力システム ━━━ -->
+    <div class="project-block project-science fade-in">
+      <div class="pb-header">
+        <div class="pb-num">PROJECT 02 ／ The Science of Rescue</div>
+        <h3 class="pb-title">レスキュー科学実験：<br>倍力システム</h3>
+        <p class="pb-challenge-hook">🔬 君の小さな手で、大人を持ち上げられるか！？</p>
+        <p class="pb-desc">消防の救助現場で実際に使われる「倍力システム」。科学の力（滑車）を使えば、子どもでも60kgの大人を持ち上げられる——その仕組みを3つのレベルで体験しよう！</p>
+      </div>
+
+      <img src="images/fire-science.jpeg" class="pb-img" alt="レスキュー科学実験：キミも未来のレスキュー隊員！">
+
+      <div class="force-levels">
+        <div class="force-level fl-lv1">
+          <div class="fl-badge">Level 1</div>
+          <div class="fl-name">1倍力<br><small>定滑車</small></div>
+          <div class="fl-person">🧍</div>
+          <div class="fl-weight">60kgの人</div>
+          <div class="fl-arrow">↓</div>
+          <div class="fl-force fl-force-hard">60kgの力が必要</div>
+          <div class="fl-rope">ロープ：1m</div>
+          <div class="fl-note">方向を変えるだけ。力は変わらない</div>
+        </div>
+        <div class="force-level fl-lv2">
+          <div class="fl-badge">Level 2</div>
+          <div class="fl-name">3倍力<br><small>救助の基本</small></div>
+          <div class="fl-person">🧍</div>
+          <div class="fl-weight">60kgの人</div>
+          <div class="fl-arrow">↓</div>
+          <div class="fl-force fl-force-med">たった 20kg !</div>
+          <div class="fl-rope">ロープ：3m</div>
+          <div class="fl-note">実際の救助現場で使われる基本システム</div>
+        </div>
+        <div class="force-level fl-lv3">
+          <div class="fl-badge">Level 3 🔥</div>
+          <div class="fl-name">5倍力<br><small>超強力！</small></div>
+          <div class="fl-person">🧍</div>
+          <div class="fl-weight">60kgの人</div>
+          <div class="fl-arrow">↓</div>
+          <div class="fl-force fl-force-easy">なんと 12kg ！</div>
+          <div class="fl-rope">ロープ：5m</div>
+          <div class="fl-note">子どもの力でも理論上は大人を持ち上げられる！</div>
+        </div>
+      </div>
+
+      <div class="science-principle">
+        <div class="sp-title">🔬 なぜ少ない力で持ち上がるの？「力と距離のトレードオフ」</div>
+        <p>魔法じゃない——長い距離を引くことで力を節約しています。ロープを長く引けばひくほど、必要な力が減る。これが「等価交換の法則」。消防士はこの科学を現場で毎日使っています。</p>
+      </div>
+
+      <div class="pb-safety">
+        <div class="pb-safety-item">🪢 本物の消防救助用スタティックロープ（伸びない専用ロープ）を使用</div>
+        <div class="pb-safety-item">🔒 メインとビレイの2本ロープ構造で安全を二重に確保</div>
+        <div class="pb-safety-item">📢 「ホール（引け）」「ストップ（止まれ）」の掛け声で安全にコントロールします</div>
+      </div>
+    </div>
+
+    <!-- 締めくくり -->
     <div class="fade-in" style="margin-bottom:1.5rem;">
-      <img src="images/fire-highfive.jpeg" class="fire-feature-img" alt="楽しかったで終わらせない。昨年の風水害の記憶を未来に伝える。">
+      <img src="images/fire-highfive.jpeg" class="fire-feature-img" alt="「楽しかった」で終わらせない。昨年の風水害の記憶を未来へつなぐ。" style="margin-bottom:0.5rem;">
+      <p style="text-align:center; font-size:0.88rem; color:var(--text-light); font-weight:700;">「楽しかった」で終わらせない——体験が、防災の記憶をつなぐ。</p>
     </div>
 
     <!-- 安全管理・雨天対応 -->
