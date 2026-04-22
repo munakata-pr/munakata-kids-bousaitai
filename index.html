@@ -511,12 +511,24 @@ body {
 
 .instagram-handle {
   font-size: 1.1rem;
-  font-weight: 700;
-  background: rgba(255,255,255,0.2);
+  font-weight: 800;
+  background: rgba(255,255,255,0.22);
+  color: var(--white);
+  text-decoration: none;
   display: inline-block;
-  padding: 0.3rem 1rem;
+  padding: 0.55rem 1.4rem;
   border-radius: 50px;
-  margin-top: 0.3rem;
+  margin-top: 0.4rem;
+  border: 2px solid rgba(255,255,255,0.6);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.instagram-handle:hover,
+.instagram-handle:focus-visible {
+  background: rgba(255,255,255,0.95);
+  color: #c13584;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  outline: none;
 }
 
 .qr-placeholder {
@@ -1419,7 +1431,7 @@ body {
     <div class="fire-hero-illust fade-in">
       <picture>
         <source srcset="images/ladder-kid.webp" type="image/webp">
-        <img src="images/ladder-kid.png" alt="はしご車に乗るちびっこ消防士" width="1024" height="1024" loading="lazy" decoding="async">
+        <img src="images/ladder-kid.webp" alt="はしご車に乗るちびっこ消防士" width="1024" height="1024" loading="lazy" decoding="async">
       </picture>
       <p class="fire-hero-illust-caption">🚒 キミも今日だけ消防士！🚒</p>
     </div>
@@ -1456,21 +1468,21 @@ body {
         <div class="fire-vehicle-card">
           <picture>
             <source srcset="images/firetruck.webp" type="image/webp">
-            <img class="vehicle-illust" src="images/firetruck.png" alt="消防車（ポンプ車）" width="600" height="400" loading="lazy" decoding="async">
+            <img class="vehicle-illust" src="images/firetruck.webp" alt="消防車（ポンプ車）" width="600" height="400" loading="lazy" decoding="async">
           </picture>
           <div class="fvc-name" style="margin-top:0.6rem;">消防車<br><small>（ポンプ車）</small></div>
         </div>
         <div class="fire-vehicle-card">
           <picture>
             <source srcset="images/ambulance.webp" type="image/webp">
-            <img class="vehicle-illust" src="images/ambulance.png" alt="救急車" width="600" height="400" loading="lazy" decoding="async">
+            <img class="vehicle-illust" src="images/ambulance.webp" alt="救急車" width="600" height="400" loading="lazy" decoding="async">
           </picture>
           <div class="fvc-name" style="margin-top:0.6rem;">救急車<br><small>（車内見学・撮影可！）</small></div>
         </div>
         <div class="fire-vehicle-card fire-vehicle-highlight">
           <picture>
             <source srcset="images/kid-camera.webp" type="image/webp">
-            <img class="vehicle-illust" src="images/kid-camera.png" alt="ちびっこ防火衣着装体験" width="600" height="400" loading="lazy" decoding="async" style="background:linear-gradient(135deg,#fff8e1,#ffecb3);">
+            <img class="vehicle-illust" src="images/kid-camera.webp" alt="ちびっこ防火衣着装体験" width="600" height="400" loading="lazy" decoding="async" style="background:linear-gradient(135deg,#fff8e1,#ffecb3);">
           </picture>
           <div class="fvc-name" style="margin-top:0.6rem;">ちびっこ防火衣<br>着装体験！</div>
           <div class="fvc-desc">子ども用消防服を着て記念撮影！<br>家族の思い出を作ろう✨</div>
@@ -1498,7 +1510,7 @@ body {
       <div class="project-illust-box">
         <picture>
           <source srcset="images/smoke-tent.webp" type="image/webp">
-          <img src="images/smoke-tent.png" alt="スモークラビリンスのテント" width="1024" height="1024" loading="lazy" decoding="async">
+          <img src="images/smoke-tent.webp" alt="スモークラビリンスのテント" width="1024" height="1024" loading="lazy" decoding="async">
         </picture>
         <p class="project-illust-caption">▲ 本物のオレンジテントで開催！</p>
       </div>
@@ -1564,7 +1576,7 @@ body {
       <div class="project-illust-box">
         <picture>
           <source srcset="images/rescue-science.webp" type="image/webp">
-          <img src="images/rescue-science.png" alt="レスキュー隊員と未来のレスキュー隊員" width="1024" height="1024" loading="lazy" decoding="async">
+          <img src="images/rescue-science.webp" alt="レスキュー隊員と未来のレスキュー隊員" width="1024" height="1024" loading="lazy" decoding="async">
         </picture>
         <p class="project-illust-caption">▲ 科学の力で重力の壁を超えろ！</p>
       </div>
@@ -1618,7 +1630,7 @@ body {
     <div class="fire-closing-illust fade-in">
       <picture>
         <source srcset="images/high-five.webp" type="image/webp">
-        <img src="images/high-five.png" alt="ハイタッチする消防士と子ども" width="1024" height="1024" loading="lazy" decoding="async">
+        <img src="images/high-five.webp" alt="ハイタッチする消防士と子ども" width="1024" height="1024" loading="lazy" decoding="async">
       </picture>
       <p class="fire-closing-caption">「楽しかった」で終わらせない。<br>明日の安全につながる、ハイタッチ！</p>
     </div>
@@ -1925,12 +1937,12 @@ body {
     <div class="instagram-box fade-in">
       <h3>📸 最新情報・お問い合わせ</h3>
       <p>公式Instagramをフォローして最新情報をチェック！</p>
-      <span class="instagram-handle">@wellnesstown_munakata</span>
+      <a class="instagram-handle" href="https://www.instagram.com/wellnesstown_munakata/" target="_blank" rel="noopener">📷 @wellnesstown_munakata をフォロー</a>
       <div class="qr-placeholder" style="background:white; padding:0.6rem; border-radius:12px;">
         <a href="https://www.instagram.com/wellnesstown_munakata/" target="_blank" rel="noopener" style="display:block;">
           <picture>
             <source srcset="images/instagram-qr.webp" type="image/webp">
-            <img src="images/instagram-qr.png" alt="Instagram QRコード" width="410" height="410" loading="lazy" decoding="async" style="width:150px; height:150px; display:block; margin:0 auto;">
+            <img src="images/instagram-qr.webp" alt="Instagram QRコード" width="410" height="410" loading="lazy" decoding="async" style="width:150px; height:150px; display:block; margin:0 auto;">
           </picture>
         </a>
       </div>
