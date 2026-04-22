@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>宗像キッズ防衛隊！ はしご車と夏の日焼け（熱中症）大作戦 | 2026年5月2日</title>
+<title>宗像キッズ防災隊！はしご車と夏の熱中症対策大作戦 | 2026年5月2日</title>
 <meta name="description" content="2026年5月2日（土）グローバルアリーナで開催！はしご車＆救急車がやってくる！ポップアップテント持参OK！家族みんなで1日中遊んで、学んで、くつろごう！入場無料。">
-<meta property="og:title" content="宗像キッズ防衛隊！ はしご車と夏の日焼け（熱中症）大作戦">
+<meta property="og:title" content="宗像キッズ防災隊！はしご車と夏の熱中症対策大作戦">
 <meta property="og:description" content="2026年5月2日（土）グローバルアリーナで開催！はしご車＆救急車がやってくる！入場無料。">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,9 +32,17 @@
   --text-dark: #333333;
   --text-light: #555555;
   --font-main: 'M PLUS Rounded 1c', 'Zen Maru Gothic', 'Rounded Mplus 1c', sans-serif;
+
+  /* ===== Font scale (6 levels) ===== */
+  --fs-xs: clamp(0.78rem, 2.2vw, 0.85rem);   /* small / labels */
+  --fs-sm: clamp(0.92rem, 2.6vw, 1rem);      /* body */
+  --fs-md: clamp(1.05rem, 3vw, 1.2rem);      /* lead / sub */
+  --fs-lg: clamp(1.3rem, 4vw, 1.6rem);       /* card title h3 */
+  --fs-xl: clamp(1.7rem, 5vw, 2.2rem);       /* section title h2 */
+  --fs-xxl: clamp(2.4rem, 8vw, 3.5rem);      /* hero h1 */
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 110px; }
 
 body {
   font-family: var(--font-main);
@@ -118,13 +126,14 @@ body {
   display: inline-block;
   background: var(--orange-main);
   color: var(--white);
-  padding: 0.5rem 1.5rem;
+  padding: 0.75rem 2rem;
   border-radius: 50px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: clamp(1.05rem, 3.2vw, 1.4rem);
+  font-weight: 900;
+  margin-bottom: 1.4rem;
   animation: bounce-in 0.8s ease-out;
-  box-shadow: 0 4px 15px rgba(255,152,0,0.4);
+  box-shadow: 0 6px 20px rgba(255,152,0,0.5);
+  letter-spacing: 0.04em;
 }
 
 .hero-gw {
@@ -136,21 +145,23 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(2.2rem, 8vw, 4.5rem);
+  font-size: clamp(3.2rem, 11vw, 5.5rem);
   font-weight: 900;
   color: var(--white);
-  text-shadow: 3px 3px 0 var(--orange-dark), 0 6px 20px rgba(0,0,0,0.15);
-  line-height: 1.2;
-  margin-bottom: 0.3rem;
-  letter-spacing: 0.05em;
+  text-shadow: 4px 4px 0 var(--orange-dark), 0 8px 28px rgba(0,0,0,0.25);
+  line-height: 1.1;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.06em;
 }
 
 .hero-subtitle {
-  font-size: clamp(1rem, 3.5vw, 1.6rem);
+  font-size: clamp(1.3rem, 4.2vw, 2rem);
   color: var(--white);
-  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
-  margin-bottom: 1.5rem;
-  font-weight: 700;
+  text-shadow: 2px 2px 0 var(--orange-dark), 0 4px 14px rgba(0,0,0,0.2);
+  margin-bottom: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  line-height: 1.35;
 }
 
 .hero-info {
@@ -169,14 +180,14 @@ body {
   padding: 0.6rem 1.2rem;
   border-radius: 50px;
   font-weight: 700;
-  font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+  font-size: var(--fs-sm);
   box-shadow: 0 3px 12px rgba(0,0,0,0.1);
 }
 .info-chip .icon { font-size: 1.3em; }
 .info-chip.free {
   background: var(--red-fire);
   color: var(--white);
-  font-size: clamp(1rem, 3vw, 1.3rem);
+  font-size: var(--fs-md);
   padding: 0.6rem 1.8rem;
 }
 
@@ -244,7 +255,7 @@ body {
 }
 
 .eyecatch-title {
-  font-size: clamp(1.4rem, 5vw, 2rem);
+  font-size: var(--fs-lg);
   font-weight: 900;
   line-height: 1.3;
   margin-bottom: 0.5rem;
@@ -252,7 +263,7 @@ body {
 }
 
 .eyecatch-note {
-  font-size: 0.9rem;
+  font-size: var(--fs-xs);
   background: rgba(255,255,255,0.25);
   display: inline-block;
   padding: 0.3rem 1rem;
@@ -261,7 +272,7 @@ body {
 }
 
 .eyecatch-desc {
-  font-size: 1rem;
+  font-size: var(--fs-sm);
   font-weight: 700;
   line-height: 1.6;
   margin-top: 0.3rem;
@@ -286,7 +297,7 @@ body {
 }
 
 .section-title {
-  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  font-size: var(--fs-xl);
   font-weight: 900;
   position: relative;
   display: inline-block;
@@ -354,7 +365,7 @@ body {
 }
 
 .card-desc {
-  font-size: 0.95rem;
+  font-size: var(--fs-sm);
   color: var(--text-light);
   line-height: 1.7;
 }
@@ -363,7 +374,7 @@ body {
   display: inline-block;
   background: var(--yellow-light);
   color: var(--orange-dark);
-  font-size: 0.8rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   padding: 0.2rem 0.8rem;
   border-radius: 50px;
@@ -425,14 +436,14 @@ body {
 }
 
 .access-name {
-  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  font-size: var(--fs-lg);
   font-weight: 900;
   color: var(--green-dark);
   margin-bottom: 0.5rem;
 }
 
 .access-address {
-  font-size: 0.95rem;
+  font-size: var(--fs-sm);
   color: var(--text-light);
   line-height: 1.7;
 }
@@ -477,7 +488,7 @@ body {
   align-items: flex-start;
   gap: 0.5rem;
   margin-bottom: 0.8rem;
-  font-size: 0.95rem;
+  font-size: var(--fs-sm);
   line-height: 1.7;
 }
 .notice-item:last-child { margin-bottom: 0; }
@@ -517,7 +528,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8rem;
+  font-size: var(--fs-xs);
   color: var(--text-light);
   font-weight: 700;
 }
@@ -528,7 +539,7 @@ body {
   color: rgba(255,255,255,0.8);
   text-align: center;
   padding: 2rem 1rem;
-  font-size: 0.85rem;
+  font-size: var(--fs-xs);
 }
 .footer a { color: rgba(255,255,255,0.9); }
 
@@ -587,14 +598,143 @@ body {
   background: var(--orange-main);
   color: var(--white);
   text-align: center;
-  padding: 0.8rem 1rem;
+  padding: 0.5rem 1rem;
   font-weight: 800;
-  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  font-size: clamp(0.85rem, 2.6vw, 1.05rem);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+/* ========== SITE NAV ========== */
+.sticky-shell {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
 }
+.site-nav {
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: saturate(160%) blur(8px);
+  -webkit-backdrop-filter: saturate(160%) blur(8px);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.site-nav-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.8rem;
+}
+.site-nav-brand {
+  font-weight: 900;
+  font-size: var(--fs-sm);
+  color: var(--red-fire);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  margin-right: auto;
+  text-decoration: none;
+}
+.site-nav-brand small { font-size: 0.7em; color: var(--text-light); font-weight: 700; margin-left: 0.3em; }
+.site-nav-list {
+  display: flex;
+  gap: 0.3rem;
+  list-style: none;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.site-nav-list::-webkit-scrollbar { display: none; }
+.site-nav-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text-dark);
+  background: var(--green-light);
+  white-space: nowrap;
+  transition: background 0.15s, transform 0.15s;
+}
+.site-nav-list a:hover { background: var(--green-main); color: #fff; transform: translateY(-1px); }
+.site-nav-list a.is-cta { background: var(--red-fire); color: #fff; }
+.site-nav-list a.is-cta:hover { background: #c62828; }
+@media (max-width: 600px) {
+  .site-nav-brand { font-size: var(--fs-xs); }
+  .site-nav-brand small { display: none; }
+  .site-nav-list a { padding: 0.35rem 0.65rem; font-size: var(--fs-xs); }
+}
+
+/* ========== SUB-TOC ========== */
+.sub-toc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem auto 1.5rem;
+  max-width: 720px;
+  padding: 0.8rem 1rem;
+  background: rgba(255,255,255,0.7);
+  border-radius: 14px;
+  border: 2px dashed var(--orange-bright);
+}
+.sub-toc-label {
+  width: 100%;
+  text-align: center;
+  font-size: var(--fs-xs);
+  font-weight: 800;
+  color: var(--orange-dark);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.3rem;
+}
+.sub-toc a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.85rem;
+  background: var(--orange-main);
+  color: #fff;
+  border-radius: 999px;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s, background 0.15s;
+}
+.sub-toc a:hover { background: var(--orange-dark); transform: translateY(-1px); }
+
+.subsection-anchor {
+  display: block;
+  position: relative;
+  top: -110px;
+  visibility: hidden;
+  height: 0;
+}
+
+/* ========== BACK TO TOP ========== */
+.back-to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--red-fire);
+  color: #fff;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 99;
+}
+.back-to-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.back-to-top:hover { background: #c62828; }
 
 /* ========== RESPONSIVE ========== */
 @media (min-width: 768px) {
@@ -667,7 +807,7 @@ body {
   color: var(--white);
   padding: 0.2rem 0.7rem;
   border-radius: 8px;
-  font-size: 0.85rem;
+  font-size: var(--fs-xs);
   flex-shrink: 0;
 }
 .ticket-row .value { flex: 1; }
@@ -689,7 +829,7 @@ body {
   padding: 0.9rem 1.1rem;
   margin: 1rem auto 0;
   max-width: 560px;
-  font-size: 0.92rem;
+  font-size: var(--fs-sm);
   color: var(--text-dark);
   line-height: 1.7;
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
@@ -737,6 +877,7 @@ body {
 
 .vehicle-illust {
   width: 100%;
+  height: auto;
   aspect-ratio: 3/2;
   object-fit: contain;
   background: linear-gradient(135deg,#e1f5fe,#b3e5fc);
@@ -760,7 +901,7 @@ body {
 }
 .project-illust-caption {
   color: rgba(255,255,255,0.85);
-  font-size: 0.85rem;
+  font-size: var(--fs-xs);
   font-weight: 700;
   margin-top: 0.5rem;
   font-style: italic;
@@ -783,7 +924,7 @@ body {
 }
 .fire-closing-caption {
   margin-top: 0.7rem;
-  font-size: 1.05rem;
+  font-size: var(--fs-sm);
   font-weight: 900;
   color: var(--orange-dark);
   line-height: 1.5;
@@ -803,7 +944,7 @@ body {
   animation: shimmer 3s linear infinite;
   color: white;
   text-align: center;
-  font-size: 0.92rem;
+  font-size: var(--fs-sm);
   font-weight: 900;
   padding: 0.55rem 1rem;
   letter-spacing: 0.12em;
@@ -822,13 +963,13 @@ body {
   flex-shrink: 0;
 }
 .fire-main-title {
-  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-size: var(--fs-xl);
   font-weight: 900;
   color: white;
   line-height: 1.2;
 }
 .fire-main-sub {
-  font-size: 0.95rem;
+  font-size: var(--fs-sm);
   color: rgba(255,255,255,0.85);
   margin-top: 0.25rem;
   font-weight: 700;
@@ -891,8 +1032,8 @@ body {
 .fire-vehicle-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
 .fire-vehicle-highlight { border-color: var(--orange-main); background: linear-gradient(135deg, #fff8e1, white); }
 .fvc-icon { font-size: 2.8rem; display: block; margin-bottom: 0.4rem; animation: wiggle 2.5s ease-in-out infinite; }
-.fvc-name { font-weight: 800; font-size: 0.95rem; color: var(--text-dark); line-height: 1.4; }
-.fvc-desc { margin-top: 0.5rem; font-size: 0.8rem; color: var(--orange-dark); font-weight: 700; line-height: 1.5; }
+.fvc-name { font-weight: 800; font-size: var(--fs-sm); color: var(--text-dark); line-height: 1.4; }
+.fvc-desc { margin-top: 0.5rem; font-size: var(--fs-xs); color: var(--orange-dark); font-weight: 700; line-height: 1.5; }
 
 /* ========== MISSION & SCIENCE ========== */
 .mission-section {
@@ -921,14 +1062,14 @@ body {
 }
 .mission-title {
   color: white;
-  font-size: clamp(1.2rem, 4vw, 1.65rem);
+  font-size: var(--fs-lg);
   font-weight: 900;
   text-shadow: 0 2px 10px rgba(0,0,0,0.6);
   line-height: 1.3;
 }
 .mission-subtitle {
   color: rgba(255,255,255,0.78);
-  font-size: 0.85rem;
+  font-size: var(--fs-xs);
   font-weight: 700;
   margin-top: 0.4rem;
   line-height: 1.6;
@@ -958,7 +1099,7 @@ body {
   text-transform: uppercase;
 }
 .project-title {
-  font-size: clamp(1rem, 3.5vw, 1.2rem);
+  font-size: var(--fs-md);
   font-weight: 900;
   color: white;
   line-height: 1.3;
@@ -987,7 +1128,7 @@ body {
   justify-content: center;
 }
 .smoke-step-label { font-size: 0.65rem; font-weight: 700; text-align: center; color: rgba(255,255,255,0.82); line-height: 1.3; }
-.smoke-arrow { color: #f9a825; font-size: 0.9rem; font-weight: 900; flex-shrink: 0; }
+.smoke-arrow { color: #f9a825; font-size: var(--fs-xs); font-weight: 900; flex-shrink: 0; }
 .project-note {
   font-size: 0.7rem;
   color: rgba(255,255,255,0.48);
@@ -1017,9 +1158,9 @@ body {
 .lv1 { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.65); }
 .lv2 { background: rgba(249,168,37,0.2); color: #ffb74d; }
 .lv3 { background: linear-gradient(135deg, #e65100, #ff9800); color: white; }
-.science-arrow { color: #f9a825; font-size: 0.9rem; font-weight: 900; }
+.science-arrow { color: #f9a825; font-size: var(--fs-xs); font-weight: 900; }
 .project-challenge {
-  font-size: 0.85rem;
+  font-size: var(--fs-xs);
   font-weight: 700;
   color: rgba(255,255,255,0.88);
   text-align: center;
@@ -1075,7 +1216,7 @@ body {
 }
 .ms-intro-title {
   color: white;
-  font-size: clamp(1.3rem, 5vw, 1.8rem);
+  font-size: var(--fs-lg);
   font-weight: 900;
   line-height: 1.3;
   margin-bottom: 0.7rem;
@@ -1084,7 +1225,7 @@ body {
 }
 .ms-intro-desc {
   color: rgba(255,255,255,0.95);
-  font-size: 0.92rem;
+  font-size: var(--fs-sm);
   font-weight: 700;
   line-height: 1.75;
   position: relative;
@@ -1102,13 +1243,13 @@ body {
 .pb-header { padding: 1.8rem 1.6rem 1.3rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
 .pb-num { font-size: 0.72rem; font-weight: 900; color: #f9a825; letter-spacing: 0.18em; margin-bottom: 0.3rem; }
 .pb-title {
-  font-size: clamp(1.4rem, 5vw, 2rem);
+  font-size: var(--fs-xl);
   font-weight: 900; color: white; line-height: 1.2; margin-bottom: 0.25rem;
 }
 .pb-tagline { font-size: 0.72rem; color: rgba(255,255,255,0.38); font-weight: 700; margin-bottom: 0.8rem; letter-spacing: 0.12em; }
-.pb-desc { font-size: 0.95rem; font-weight: 700; color: rgba(255,255,255,0.8); line-height: 1.8; }
+.pb-desc { font-size: var(--fs-sm); font-weight: 700; color: rgba(255,255,255,0.8); line-height: 1.8; }
 .pb-challenge-hook {
-  font-size: clamp(1rem, 3.8vw, 1.35rem);
+  font-size: var(--fs-md);
   font-weight: 900; color: #ffeb3b; margin-bottom: 0.5rem; line-height: 1.3;
 }
 .pb-img { width: 100%; display: block; }
@@ -1122,14 +1263,14 @@ body {
 }
 .sms-num {
   background: #f9a825; color: #1a1a1a;
-  font-size: 0.95rem; font-weight: 900;
+  font-size: var(--fs-sm); font-weight: 900;
   width: 30px; height: 30px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .sms-icon { font-size: 1.55rem; flex-shrink: 0; line-height: 1.2; }
 .sms-content { flex: 1; }
 .sms-title { font-size: 1rem; font-weight: 900; color: white; margin-bottom: 0.25rem; }
-.sms-desc { font-size: 0.85rem; font-weight: 700; color: rgba(255,255,255,0.7); line-height: 1.72; }
+.sms-desc { font-size: var(--fs-xs); font-weight: 700; color: rgba(255,255,255,0.7); line-height: 1.72; }
 .sms-connector { text-align: center; color: #f9a825; font-size: 1.3rem; padding: 0.25rem 0; }
 
 /* Force Levels */
@@ -1150,9 +1291,9 @@ body {
 .fl-name small { font-size: 0.72rem; color: rgba(255,255,255,0.55); }
 .fl-person { font-size: 1.6rem; }
 .fl-weight { font-size: 0.82rem; color: rgba(255,255,255,0.55); font-weight: 700; }
-.fl-arrow { color: rgba(255,255,255,0.3); font-size: 0.85rem; }
+.fl-arrow { color: rgba(255,255,255,0.3); font-size: var(--fs-xs); }
 .fl-force {
-  font-size: 0.9rem; font-weight: 900;
+  font-size: var(--fs-xs); font-weight: 900;
   padding: 0.38rem 0.6rem; border-radius: 8px; line-height: 1.3;
 }
 .fl-force-hard { background: rgba(229,57,53,.18); color: #ef9a9a; }
@@ -1167,12 +1308,12 @@ body {
   background: rgba(255,255,255,0.06); border-radius: 12px;
   padding: 1rem 1.1rem; border-left: 4px solid #f9a825;
 }
-.sp-title { font-size: 0.9rem; font-weight: 900; color: #f9a825; margin-bottom: 0.4rem; }
-.science-principle p { font-size: 0.85rem; font-weight: 700; color: rgba(255,255,255,0.72); line-height: 1.75; }
+.sp-title { font-size: var(--fs-xs); font-weight: 900; color: #f9a825; margin-bottom: 0.4rem; }
+.science-principle p { font-size: var(--fs-xs); font-weight: 700; color: rgba(255,255,255,0.72); line-height: 1.75; }
 
 /* Safety notes inside project blocks */
 .pb-safety { padding: 0.8rem 1.4rem 1.5rem; display: flex; flex-direction: column; gap: 0.4rem; }
-.pb-safety-item { font-size: 0.8rem; font-weight: 700; color: rgba(255,255,255,0.5); line-height: 1.6; }
+.pb-safety-item { font-size: var(--fs-xs); font-weight: 700; color: rgba(255,255,255,0.5); line-height: 1.6; }
 
 /* ========== FIRE SECTION IMAGES ========== */
 .fire-feature-img {
@@ -1191,12 +1332,30 @@ body {
 }
 </style>
 </head>
-<body>
+<body id="top">
 
-<!-- COUNTDOWN BAR -->
-<div class="countdown-bar" id="countdown">
-  <span id="countdown-text"></span>
+<!-- ========== STICKY HEADER ========== -->
+<div class="sticky-shell">
+  <!-- COUNTDOWN BAR -->
+  <div class="countdown-bar" id="countdown">
+    <span id="countdown-text"></span>
+  </div>
+
+  <!-- ========== SITE NAV ========== -->
+  <nav class="site-nav" aria-label="セクションナビ">
+    <div class="site-nav-inner">
+      <a href="#top" class="site-nav-brand">🚒 宗像キッズ防災隊<small>5/2(土)</small></a>
+      <ul class="site-nav-list">
+        <li><a href="#fire">🚒 体験</a></li>
+        <li><a href="#schedule">📅 時間</a></li>
+        <li><a href="#access">📍 場所</a></li>
+        <li><a href="#fire-main" class="is-cta">🎯 抽選</a></li>
+      </ul>
+    </div>
+  </nav>
 </div>
+
+<button class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">↑</button>
 
 <!-- ========== HERO ========== -->
 <section class="hero">
@@ -1207,35 +1366,15 @@ body {
 
   <div class="hero-badge">GW特別イベント ／ 入場無料</div>
 
-  <p class="hero-gw">ゴールデンウィークは、家族みんなでグローバルアリーナへ！</p>
-
-  <h1 class="hero-title">宗像キッズ<br>防衛隊！</h1>
-  <p class="hero-subtitle">はしご車と夏の日焼け（熱中症）大作戦</p>
+  <h1 class="hero-title">宗像キッズ<br>防災隊！</h1>
+  <p class="hero-subtitle">はしご車と夏の熱中症対策大作戦</p>
 
   <div class="hero-info">
     <span class="info-chip"><span class="icon">📅</span>2026年5月2日（土）</span>
-    <span class="info-chip"><span class="icon">🕙</span>10:00〜16:00</span>
+    <span class="info-chip"><span class="icon">🕙</span>10:00〜15:00</span>
+    <span class="info-chip"><span class="icon">📍</span>グローバルアリーナ</span>
     <span class="info-chip free">🎉 入場無料</span>
   </div>
-
-  <div class="ticket" style="position:relative; z-index:2;">
-    <div class="ticket-row">
-      <span class="label">日時</span>
-      <span class="value">2026年5月2日（土）10:00〜16:00</span>
-    </div>
-    <hr class="ticket-divider">
-    <div class="ticket-row">
-      <span class="label">場所</span>
-      <span class="value">グローバルアリーナ　陸上競技場グラウンド</span>
-    </div>
-    <hr class="ticket-divider">
-    <div class="ticket-row">
-      <span class="label">入場</span>
-      <span class="value" style="color: var(--red-fire); font-size: 1.3em;">無料！</span>
-    </div>
-  </div>
-
-
 
   <a href="#contents" class="scroll-cta" style="position:relative; z-index:2;">
     ▼ イベント内容をチェック
@@ -1247,8 +1386,8 @@ body {
   <div class="eyecatch-card eyecatch-fire fade-in">
     <span class="eyecatch-icon">🚒</span>
     <h2 class="eyecatch-title">はしご車＆救急車が<br>やってくる！</h2>
-    <span class="eyecatch-note">⚠️ はしご車の搭乗体験は【抽選】です</span>
-    <p class="eyecatch-desc" style="margin-top: 0.5rem;">消防署コラボで本物の消防車両が大集合！</p>
+    <span class="eyecatch-note">⚠️ はしご車の搭乗体験は【当日抽選】です</span>
+    <p class="eyecatch-desc" style="margin-top: 0.5rem;">抽選の詳細は公式Instagramでお知らせします！</p>
   </div>
   <div class="eyecatch-card eyecatch-tent fade-in">
     <span class="eyecatch-icon">⛺</span>
@@ -1267,14 +1406,26 @@ body {
       <p class="section-subtitle">宗像地区消防本部が全力で贈る、<br>「生きる力」と「地域の安全」を楽しく学ぶ体験ゾーン！</p>
     </div>
 
+    <!-- 消防セクション内ミニ目次 -->
+    <nav class="sub-toc fade-in" aria-label="消防セクション内ナビ">
+      <span class="sub-toc-label">▼ このセクションの内容</span>
+      <a href="#fire-main">🪜 はしご車・抽選</a>
+      <a href="#fire-vehicles">🚒 車両展示</a>
+      <a href="#fire-mission">🌀 スモークラビリンス</a>
+      <a href="#fire-science">🔬 倍力システム</a>
+    </nav>
+
     <!-- メイン消防車イラスト -->
     <div class="fire-hero-illust fade-in">
-      <img src="images/ladder-kid.png" alt="はしご車に乗るちびっこ消防士">
+      <picture>
+        <source srcset="images/ladder-kid.webp" type="image/webp">
+        <img src="images/ladder-kid.png" alt="はしご車に乗るちびっこ消防士" width="1024" height="1024" loading="lazy" decoding="async">
+      </picture>
       <p class="fire-hero-illust-caption">🚒 キミも今日だけ消防士！🚒</p>
     </div>
 
     <!-- ★ メインアトラクション：はしご車 -->
-    <div class="fire-main fade-in">
+    <div class="fire-main fade-in" id="fire-main">
       <div class="fire-main-crown">👑 メインアトラクション 👑</div>
       <div class="fire-main-body">
         <div class="fire-main-title-area">
@@ -1290,28 +1441,37 @@ body {
           <div class="fire-rule">📏 高さ<strong>10mまで</strong></div>
           <div class="fire-rule">👨‍🚒 最大<strong>30組限定</strong></div>
           <div class="fire-rule">⏱️ 1組<strong>約5分</strong></div>
-          <div class="fire-rule">🎯 選考<strong>事前抽選</strong></div>
+          <div class="fire-rule">🎯 選考<strong>当日抽選</strong></div>
         </div>
         <div class="fire-lottery-note">
-          🎊 空きが出た場合はその場で<strong>じゃんけん大会</strong>で決定！チャンスはあるぞ！
+          🎊 抽選方法などの詳細は公式<strong>Instagram</strong>でお知らせします！
         </div>
       </div>
     </div>
 
     <!-- 車両展示・記念撮影ゾーン -->
-    <div class="fire-vehicles fade-in">
+    <div class="fire-vehicles fade-in" id="fire-vehicles">
       <h3 class="fire-sub-heading">📸 車両展示・記念撮影ゾーン</h3>
       <div class="fire-vehicle-cards">
         <div class="fire-vehicle-card">
-          <img class="vehicle-illust" src="images/firetruck.png" alt="消防車（ポンプ車）">
+          <picture>
+            <source srcset="images/firetruck.webp" type="image/webp">
+            <img class="vehicle-illust" src="images/firetruck.png" alt="消防車（ポンプ車）" width="600" height="400" loading="lazy" decoding="async">
+          </picture>
           <div class="fvc-name" style="margin-top:0.6rem;">消防車<br><small>（ポンプ車）</small></div>
         </div>
         <div class="fire-vehicle-card">
-          <img class="vehicle-illust" src="images/ambulance.png" alt="救急車">
+          <picture>
+            <source srcset="images/ambulance.webp" type="image/webp">
+            <img class="vehicle-illust" src="images/ambulance.png" alt="救急車" width="600" height="400" loading="lazy" decoding="async">
+          </picture>
           <div class="fvc-name" style="margin-top:0.6rem;">救急車<br><small>（車内見学・撮影可！）</small></div>
         </div>
         <div class="fire-vehicle-card fire-vehicle-highlight">
-          <img class="vehicle-illust" src="images/kid-camera.png" alt="ちびっこ防火衣着装体験" style="background:linear-gradient(135deg,#fff8e1,#ffecb3);">
+          <picture>
+            <source srcset="images/kid-camera.webp" type="image/webp">
+            <img class="vehicle-illust" src="images/kid-camera.png" alt="ちびっこ防火衣着装体験" width="600" height="400" loading="lazy" decoding="async" style="background:linear-gradient(135deg,#fff8e1,#ffecb3);">
+          </picture>
           <div class="fvc-name" style="margin-top:0.6rem;">ちびっこ防火衣<br>着装体験！</div>
           <div class="fvc-desc">子ども用消防服を着て記念撮影！<br>家族の思い出を作ろう✨</div>
         </div>
@@ -1328,7 +1488,7 @@ body {
     </div>
 
     <!-- ━━━ Project 01：スモークラビリンス ━━━ -->
-    <div class="project-block project-smoke fade-in">
+    <div class="project-block project-smoke fade-in" id="fire-mission">
       <div class="pb-header">
         <div class="pb-num">PROGRAM 01</div>
         <h3 class="pb-title">緊急出動！スモークラビリンス</h3>
@@ -1336,7 +1496,10 @@ body {
         <p class="pb-desc">視界ゼロの煙の中を進みながら、無線で本部と連絡をとり、倒れている要救助者を発見して消火しながら脱出する——本番さながらのミッションを4ステップで体験しよう！</p>
       </div>
       <div class="project-illust-box">
-        <img src="images/smoke-tent.png" alt="スモークラビリンスのテント">
+        <picture>
+          <source srcset="images/smoke-tent.webp" type="image/webp">
+          <img src="images/smoke-tent.png" alt="スモークラビリンスのテント" width="1024" height="1024" loading="lazy" decoding="async">
+        </picture>
         <p class="project-illust-caption">▲ 本物のオレンジテントで開催！</p>
       </div>
 
@@ -1391,7 +1554,7 @@ body {
     </div>
 
     <!-- ━━━ Project 02：倍力システム ━━━ -->
-    <div class="project-block project-science fade-in">
+    <div class="project-block project-science fade-in" id="fire-science">
       <div class="pb-header">
         <div class="pb-num">PROGRAM 02</div>
         <h3 class="pb-title">レスキュー科学実験：倍力システム</h3>
@@ -1399,7 +1562,10 @@ body {
         <p class="pb-desc">消防の救助現場で実際に使われる「倍力システム」。科学の力（滑車）を使えば、子どもでも大人を持ち上げられる——その仕組みを3つのレベルで体験しよう！</p>
       </div>
       <div class="project-illust-box">
-        <img src="images/rescue-science.png" alt="レスキュー隊員と未来のレスキュー隊員">
+        <picture>
+          <source srcset="images/rescue-science.webp" type="image/webp">
+          <img src="images/rescue-science.png" alt="レスキュー隊員と未来のレスキュー隊員" width="1024" height="1024" loading="lazy" decoding="async">
+        </picture>
         <p class="project-illust-caption">▲ 科学の力で重力の壁を超えろ！</p>
       </div>
 
@@ -1450,7 +1616,10 @@ body {
 
     <!-- 締めくくりイラスト -->
     <div class="fire-closing-illust fade-in">
-      <img src="images/high-five.png" alt="ハイタッチする消防士と子ども">
+      <picture>
+        <source srcset="images/high-five.webp" type="image/webp">
+        <img src="images/high-five.png" alt="ハイタッチする消防士と子ども" width="1024" height="1024" loading="lazy" decoding="async">
+      </picture>
       <p class="fire-closing-caption">「楽しかった」で終わらせない。<br>明日の安全につながる、ハイタッチ！</p>
     </div>
 
@@ -1552,22 +1721,29 @@ body {
         <li class="schedule-item">
           <span class="schedule-time">10:00〜</span>
           <div class="schedule-body">
-            <h3 class="schedule-title">🪜 はしご車搭乗体験【抽選】</h3>
-            <p class="schedule-desc">抽選の回数・時間は調整中。当日会場にてご案内します。</p>
+            <h3 class="schedule-title">🪜 はしご車搭乗体験【当日抽選】</h3>
+            <p class="schedule-desc">抽選の詳細は公式Instagramにて順次お知らせします。</p>
+          </div>
+        </li>
+        <li class="schedule-item">
+          <span class="schedule-time">10:30〜</span>
+          <div class="schedule-body">
+            <h3 class="schedule-title">🏉 ラグビー体験：午前（GA）</h3>
+            <p class="schedule-desc">10:30〜11:30の1時間開催。家族で参加OK！</p>
+          </div>
+        </li>
+        <li class="schedule-item">
+          <span class="schedule-time">13:30〜</span>
+          <div class="schedule-body">
+            <h3 class="schedule-title">🏉 ラグビー体験：午後（GA）</h3>
+            <p class="schedule-desc">13:30〜14:30の1時間開催。午後の部もスタート！</p>
           </div>
         </li>
         <li class="schedule-item">
           <span class="schedule-time">随時</span>
           <div class="schedule-body">
-            <h3 class="schedule-title">🏉 ラグビー体験（GA）</h3>
-            <p class="schedule-desc">はしご車抽選の30分後にスタート。家族で参加OK！</p>
-          </div>
-        </li>
-        <li class="schedule-item">
-          <span class="schedule-time">合間に</span>
-          <div class="schedule-body">
             <h3 class="schedule-title">🤸 リフレ スポーツ教室</h3>
-            <p class="schedule-desc">ラグビーの合間に実施。自由遊び＋レクチャーの2本立て。</p>
+            <p class="schedule-desc">自由遊び＋レクチャーの2本立てで実施予定。</p>
           </div>
         </li>
         <li class="schedule-item">
@@ -1585,10 +1761,10 @@ body {
           </div>
         </li>
         <li class="schedule-item">
-          <span class="schedule-time">16:00</span>
+          <span class="schedule-time">15:00</span>
           <div class="schedule-body">
             <h3 class="schedule-title">🏁 イベント終了</h3>
-            <p class="schedule-desc">消防コーナー撤収後も、その他のコンテンツは16:00まで継続します。</p>
+            <p class="schedule-desc">15:00をもってイベント全体が終了します。お気をつけてお帰りください。</p>
           </div>
         </li>
       </ul>
@@ -1626,7 +1802,7 @@ body {
   font-weight: 900;
   padding: 0.3rem 0.6rem;
   border-radius: 999px;
-  font-size: 0.95rem;
+  font-size: var(--fs-sm);
   line-height: 1.4;
 }
 .schedule-body { flex: 1; }
@@ -1636,11 +1812,11 @@ body {
   color: var(--green-dark);
   margin-bottom: 0.3rem;
 }
-.schedule-desc { font-size: 0.95rem; line-height: 1.6; color: var(--text-light); margin: 0; }
+.schedule-desc { font-size: var(--fs-sm); line-height: 1.6; color: var(--text-light); margin: 0; }
 .schedule-note {
   text-align: center;
   margin-top: 1rem;
-  font-size: 0.85rem;
+  font-size: var(--fs-xs);
   opacity: 0.7;
 }
 @media (max-width: 600px) {
@@ -1669,7 +1845,7 @@ body {
         <div class="card-icon">🥤</div>
         <h3 class="card-title">エムエム西日本（試飲・ジュース販売）</h3>
         <p class="card-desc">
-          こだわりのドリンクを試飲＆販売。暑い日はキンキンに冷えた一杯でリフレッシュ！
+          ドリンクを試飲＆販売。<br>射的、スーパーボールすくい、◯◯詰め放題も用意！
         </p>
       </div>
       <div class="content-card fade-in">
@@ -1752,7 +1928,10 @@ body {
       <span class="instagram-handle">@wellnesstown_munakata</span>
       <div class="qr-placeholder" style="background:white; padding:0.6rem; border-radius:12px;">
         <a href="https://www.instagram.com/wellnesstown_munakata/" target="_blank" rel="noopener" style="display:block;">
-          <img src="images/instagram-qr.png" alt="Instagram QRコード" style="width:150px; height:150px; display:block; margin:0 auto;">
+          <picture>
+            <source srcset="images/instagram-qr.webp" type="image/webp">
+            <img src="images/instagram-qr.png" alt="Instagram QRコード" width="410" height="410" loading="lazy" decoding="async" style="width:150px; height:150px; display:block; margin:0 auto;">
+          </picture>
         </a>
       </div>
     </div>
@@ -1878,7 +2057,7 @@ body {
 .partner-name {
   font-weight: 800;
   color: var(--green-dark);
-  font-size: 0.9rem;
+  font-size: var(--fs-xs);
   line-height: 1.35;
   word-break: keep-all;
   overflow-wrap: break-word;
@@ -1887,9 +2066,9 @@ body {
 
 <!-- ========== FOOTER ========== -->
 <footer class="footer">
-  <p>宗像キッズ防衛隊！ はしご車と夏の日焼け（熱中症）大作戦</p>
+  <p>宗像キッズ防災隊！はしご車と夏の熱中症対策大作戦</p>
   <p style="margin-top: 0.3rem;">2026年5月2日（土）グローバルアリーナ</p>
-  <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.6;">&copy; 2026 ウェルネスタウンむなかた</p>
+  <p style="margin-top: 0.5rem; font-size: var(--fs-xs); opacity: 0.6;">&copy; 2026 ウェルネスタウンむなかた</p>
 </footer>
 
 <script>
@@ -1931,15 +2110,30 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 // ========== SMOOTH SCROLL ==========
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+    const href = this.getAttribute('href');
+    if (href === '#top') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    const target = document.querySelector(href);
     if (target) {
-      const offset = 50;
+      e.preventDefault();
+      const offset = 100;
       const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }
   });
 });
+
+// ========== BACK TO TOP ==========
+const backBtn = document.getElementById('backToTop');
+const toggleBackBtn = () => {
+  if (window.pageYOffset > 600) backBtn.classList.add('is-visible');
+  else backBtn.classList.remove('is-visible');
+};
+window.addEventListener('scroll', toggleBackBtn, { passive: true });
+backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 </script>
 </body>
 </html>
